@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import theme from '../config/theme'
+import defaultTheme from '../config/theme'
 import buttonPadding from '../config/utils/buttonPadding'
 import fontSize from '../config/utils/fontSize'
 
-const StyledButton = styled.button`
+const SaganButton = styled.button`
     border-radius: 1px;
     display: inline-block;
     cursor: pointer;
@@ -13,82 +13,102 @@ const StyledButton = styled.button`
     padding: ${buttonPadding(10)};
     font-size: ${fontSize(-2)};
     border: none;
-    background-color: ${theme.colors.black};
-    color: ${theme.colors.white};
+    background-color: ${defaultTheme.colors.black};
+    color: ${defaultTheme.colors.white};
 
     &:focus {
         outline: none;
     }
 
     &:active {
-        background: ${theme.button.colors.active.background};
+        background: ${defaultTheme.button.colors.active.background};
     }
 
     &:hover {
         opacity: 0.8;
     }
 
-    /* Colors */
-    ${props =>
-        props.primary &&
-        css`
-            background: ${theme.colors.primary};
-            color: white;
-        `};
+    /* 
+    Color Types 
+    */
+    ${(context) => context.type &&
+    ((context.type === 'primary') && css`
+        background-color: ${context.theme.primaryColor || defaultTheme.colors.primary};
+    `) ||
 
-    ${props =>
-        props.secondary &&
-        css`
-            background: ${theme.colors.secondary};
-            color: ${theme.colors.white};
-        `};
+    ((context.type === 'secondary') && css`
+        background-color: ${context.theme.secondaryColor || defaultTheme.colors.secondary};
+    `) ||
 
-    ${props =>
-        props.success &&
-        css`
-            background: ${theme.colors.green.is500};
-            color: ${theme.colors.white};
-        `};
+    ((context.type === 'success') && css`
+        background-color: ${defaultTheme.colors.green.is400}; 
+        color: ${defaultTheme.colors.green.is800};
+    `) ||
 
-    ${props =>
-        props.rounded &&
-        css`
-            border-radius: 3px;
-        `};
+    ((context.type === 'info') && css`
+        background-color: ${defaultTheme.colors.blue.is400}; 
+        color: ${defaultTheme.colors.blue.is800};
+    `) ||
 
-    ${props =>
-        props.pill &&
-        css`
-            border-radius: 50px;
-        `};
+    ((context.type === 'warning') && css`
+        background-color: ${defaultTheme.colors.yellow.is400}; 
+        color: ${defaultTheme.colors.yellow.is800};
+    `) ||
 
-    /* Sizes */
-    ${props =>
-        props.small &&
-        css`
-            font-size: ${fontSize(-4)};
-            padding: ${buttonPadding(5)};
-        `};
+    ((context.type === 'danger') && css`
+        background-color: ${defaultTheme.colors.red.is400};
+        color: ${defaultTheme.colors.red.is800};
+    `)}}};
 
-    ${props =>
-        props.medium &&
-        css`
-            font-size: ${fontSize(0)};
-            padding: ${buttonPadding(10)};
-        `};
+    /* 
+    Corner Types 
+    */
+    ${(context) => context.corners &&
+    ((context.corners === 'rounded') && css`
+        border-radius: ${context.theme.borderRadius || defaultTheme.border.borderRadius};
+    `) ||
 
-    ${props =>
-        props.large &&
-        css`
-            font-size: ${fontSize(4)};
-            padding: ${buttonPadding(15)};
-        `};
+    ((context.corners === 'pill') && css`
+        border-radius: 20px;
+    `)}}};
+
+    /* 
+    Sizes Types 
+    */
+   ${(context) => context.size &&
+    ((context.size === 'small') && css`
+        font-size: ${fontSize(-4)};
+        padding: ${buttonPadding(5)};
+    `) ||
+
+    ((context.size === 'large') && css`
+        font-size: ${fontSize(4)};
+        padding: ${buttonPadding(15)};
+    `)}}};
 `
 
-const Button = props => <StyledButton {...props}>{props.label}</StyledButton>
+const Button = props => <SaganButton {...props}>{props.label}</SaganButton>
 
 Button.propTypes = {
-    label: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired,
+    type: PropTypes.oneOf([
+        'primary',
+        'secondary',
+        'success',
+        'danger',
+        'warning',
+        'info',
+        'light',
+        'dark'
+    ]),
+    corners: PropTypes.oneOf([
+        'rounded',
+        'pill'
+    ]),
+    size: PropTypes.oneOf([
+        'small',
+        'large'
+    ])
 }
 
 export default Button

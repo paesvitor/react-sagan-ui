@@ -2,6 +2,8 @@ import red from './red'
 import pink from './pink'
 import green from './green'
 import purple from './purple'
+import blue from './blue'
+import yellow from './yellow'
 
 const white = '#fff'
 const black = '#000'
@@ -12,5 +14,7 @@ export default {
     pink,
     green,
     white,
-    black
+    black,
+    blue,
+    yellow
 }

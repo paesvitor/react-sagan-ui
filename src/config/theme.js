@@ -13,6 +13,10 @@ export const font = {
     }
 }
 
+export const border = {
+    borderRadius: '3px'
+}
+
 // Button
 export const button = {
     sizes: {
@@ -31,7 +35,8 @@ export const button = {
 export const theme = {
     font,
     button,
-    colors
+    colors,
+    border
 }
 
 export default theme
