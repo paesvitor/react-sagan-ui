@@ -24,7 +24,13 @@ export const button = {
         paddingX: 30
     },
 
+    border: {
+        radius: '1px',
+        size: '1px'
+    },
+
     colors: {
+        default: '#fff',
         active: {
             background: colors.black
         }
