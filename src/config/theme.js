@@ -1,8 +1,8 @@
 // Colors
-import colors from "./colors";
+import colors from './colors'
 
-colors.primary = colors.pink.is500;
-colors.secondary = colors.purple.is500;
+colors.primary = colors.pink.is500
+colors.secondary = colors.purple.is500
 
 // Font
 export const font = {
@@ -11,7 +11,7 @@ export const font = {
         normal: 400,
         bold: 700
     }
-};
+}
 
 // Button
 export const button = {
@@ -25,13 +25,13 @@ export const button = {
             background: colors.black
         }
     }
-};
+}
 
 // General Theme Export
 export const theme = {
     font,
     button,
     colors
-};
+}
 
-export default theme;
+export default theme

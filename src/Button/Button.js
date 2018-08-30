@@ -11,7 +11,7 @@ const StyledButton = styled.button`
     cursor: pointer;
     transition: 0.3s all;
     padding: ${buttonPadding(10)};
-    font-size: ${fontSize(0)};
+    font-size: ${fontSize(-2)};
     border: none;
     background-color: ${theme.colors.black};
     color: ${theme.colors.white};
@@ -30,55 +30,55 @@ const StyledButton = styled.button`
 
     /* Colors */
     ${props =>
-    props.primary &&
+        props.primary &&
         css`
             background: ${theme.colors.primary};
             color: white;
         `};
 
     ${props =>
-    props.secondary &&
+        props.secondary &&
         css`
             background: ${theme.colors.secondary};
             color: ${theme.colors.white};
         `};
 
     ${props =>
-    props.success &&
+        props.success &&
         css`
             background: ${theme.colors.green.is500};
             color: ${theme.colors.white};
         `};
 
     ${props =>
-    props.rounded &&
+        props.rounded &&
         css`
-            border-radius: 6px;
+            border-radius: 3px;
         `};
 
     ${props =>
-    props.pill &&
+        props.pill &&
         css`
             border-radius: 50px;
         `};
 
     /* Sizes */
     ${props =>
-    props.small &&
+        props.small &&
         css`
             font-size: ${fontSize(-4)};
             padding: ${buttonPadding(5)};
         `};
 
     ${props =>
-    props.medium &&
+        props.medium &&
         css`
             font-size: ${fontSize(0)};
             padding: ${buttonPadding(10)};
         `};
 
     ${props =>
-    props.large &&
+        props.large &&
         css`
             font-size: ${fontSize(4)};
             padding: ${buttonPadding(15)};
@@ -88,7 +88,7 @@ const StyledButton = styled.button`
 const Button = props => <StyledButton {...props}>{props.label}</StyledButton>
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired
 }
 
 export default Button

@@ -1,15 +1,15 @@
-import { button } from "../theme";
+import { button } from '../theme'
 
 const buttonPadding = size => {
-    let y;
-    let x;
+    let y
+    let x
 
     if (size > 0) {
-        y = (button.sizes.paddingY / 100) * size * 10;
-        x = (button.sizes.paddingX / 100) * size * 10;
+        y = (button.sizes.paddingY / 100) * size * 10
+        x = (button.sizes.paddingX / 100) * size * 10
     }
 
-    return `${y}px ${x}px`;
-};
+    return `${y}px ${x}px`
+}
 
-export default buttonPadding;
+export default buttonPadding

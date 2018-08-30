@@ -1,5 +1,5 @@
-import { font } from "../theme";
+import { font } from '../theme'
 
-const fontSize = change => font.size + change + "px";
+const fontSize = change => font.size + change + 'px'
 
-export default fontSize;
+export default fontSize
