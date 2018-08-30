@@ -13,7 +13,7 @@ export const font = {
     }
 }
 
-export const border = {
+export const global = {
     borderRadius: '3px'
 }
 
@@ -42,7 +42,7 @@ export const theme = {
     font,
     button,
     colors,
-    border
+    global
 }
 
 export default theme

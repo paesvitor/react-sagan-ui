@@ -25,7 +25,8 @@ Button.propTypes = {
     size: PropTypes.oneOf([
         'small',
         'large'
-    ])
+    ]),
+    inverted: PropTypes.bool
 }
 
 export default Button

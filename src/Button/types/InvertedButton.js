@@ -15,7 +15,7 @@ const InvertedButton = styled(FlatButton)`
 
         &:hover {
             background-color: ${context.theme.primaryColor || defaultTheme.colors.primary};
-            color: ${context.theme.defaultButtonColor || defaultTheme.button.colors.default}
+            color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default}
         }
     `) ||
 
@@ -25,7 +25,7 @@ const InvertedButton = styled(FlatButton)`
         
         &:hover {
             background-color: ${context.theme.secondaryColor || defaultTheme.colors.secondary};
-            color: ${context.theme.defaultButtonColor || defaultTheme.button.colors.default}
+            color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default}
         }
     `) ||
 

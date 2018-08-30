@@ -4,7 +4,7 @@ import buttonPadding from '../../config/utils/buttonPadding'
 import fontSize from '../../config/utils/fontSize'
 
 const FlatButton = styled.button`
-    border-radius: ${context => context.theme.borderRadius || defaultTheme.button.border.radius};
+    border-radius: ${context => context.theme.globalBorderRadius || defaultTheme.global.borderRadius};
     display: inline-block;
     cursor: pointer;
     transition: 0.3s all;
@@ -12,7 +12,7 @@ const FlatButton = styled.button`
     font-size: ${fontSize(-2)};
     border: none;
     background-color: ${defaultTheme.colors.black};
-    color: ${context => context.theme.defaultButtonColor || defaultTheme.button.colors.default};
+    color: ${context => context.theme.buttonFontColor || defaultTheme.button.colors.default};
 
     &:focus {
         outline: none;
