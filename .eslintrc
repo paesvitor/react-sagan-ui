@@ -2,22 +2,27 @@
   "parser": "babel-eslint",
   "extends": [
     "standard",
-    "standard-react"
+    "standard-react",
+    "plugin:jest/recommended"
   ],
   "env": {
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "plugins": [
-    "react"
+    "react",
+    "jest"
   ],
   "parserOptions": {
     "sourceType": "module"
   },
   "rules": {
-    // don't force es6 functions to include space before paren
     "space-before-function-paren": 0,
-
-    // allow specifying true explicitly for boolean props
-    "react/jsx-boolean-value": 0
+    "react/jsx-boolean-value": 0,
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
   }
 }
