@@ -13,7 +13,7 @@ const BaseButton = styled.button`
         cursor: pointer;
         transition: 0.3s all;
         padding: ${buttonPadding(context.theme.buttonSize || 10)};
-        font-size: ${fontSize(context.theme.buttonFontSize || defaultTheme.font.size)};
+        font-size: ${fontSize(context.theme.buttonFontSize || defaultTheme.button.fontSize)};
         border: none;
         background-color: ${defaultTheme.colors.black};
         color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default};
@@ -54,13 +54,13 @@ const BaseButton = styled.button`
         */
         ${context.size &&
         ((context.size === 'small') && css`
-            font-size: ${fontSize(-4)};
+            font-size: ${fontSize((context.theme.buttonFontSize - 4) || defaultTheme.button.fontSize)};
             padding: ${buttonPadding((context.theme.buttonSize - 5) || 5)};
         `) ||
 
         ((context.size === 'large') && css`
-            font-size: ${fontSize(4)};
-            padding: ${buttonPadding((context.theme.buttonSize + 5) || 5)};
+            font-size: ${fontSize((context.theme.buttonFontSize + 4) || defaultTheme.button.fontSize)}};
+            padding: ${buttonPadding((context.theme.buttonSize + 5) || 15)};
         `)}
 
     `}

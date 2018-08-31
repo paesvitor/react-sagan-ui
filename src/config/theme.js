@@ -24,6 +24,8 @@ export const button = {
         paddingX: 30
     },
 
+    fontSize: 14,
+
     border: {
         radius: '1px',
         size: '1px'
