@@ -18,7 +18,9 @@ const SaganButtonGroup = styled.div`
 const ButtonGroup = (props) => <SaganButtonGroup {...props}>{props.children}</SaganButtonGroup>
 
 ButtonGroup.propTypes = {
+    // This components childrens
     children: PropTypes.node,
+    // Defines children buttons spacing
     buttonSpacing: PropTypes.number
 }
 
