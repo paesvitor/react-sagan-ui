@@ -11,7 +11,7 @@ const BaseButton = styled.button`
         border-radius: ${context.theme.globalBorderRadius || defaultTheme.global.borderRadius};
         display: inline-block;
         cursor: pointer;
-        transition: 0.3s all;
+        transition: 0.2s all;
         padding: ${buttonPadding(context.theme.buttonSize || 10)};
         font-size: ${fontSize(context.theme.buttonFontSize || defaultTheme.button.fontSize)};
         border: none;
@@ -23,7 +23,8 @@ const BaseButton = styled.button`
         }
 
         &:active {
-            background: ${defaultTheme.button.colors.active.background};
+            transition: 0s all;
+            transform: translateY(1px);
         }
 
         &:hover {
