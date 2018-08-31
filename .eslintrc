@@ -17,7 +17,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "indent": [2, 4, {"SwitchCase": 1}],
+    "indent": 2,
     "space-before-function-paren": 0,
     "react/jsx-boolean-value": 0,
     "jest/no-disabled-tests": "warn",
