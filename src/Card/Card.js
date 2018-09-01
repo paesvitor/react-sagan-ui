@@ -2,15 +2,17 @@ import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import defaultTheme from '../config/theme'
 import PropTypes from 'prop-types'
+import toPx from '../config/utils/toPx'
 
 const SaganCard = styled.div`
     ${context => css`
         word-wrap: break-word;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
         margin-bottom: 15px;
+        background-color: #fff;
+        border-radius: ${context.theme.globalBorderRadius || defaultTheme.global.borderRadius};
         .card-header {
             background: ${defaultTheme.colors.gray.is200};
-            height: 190px;
+            height: ${toPx(context.theme.cardHeaderSize || defaultTheme.card.headerSize)};
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -20,7 +22,7 @@ const SaganCard = styled.div`
             padding: 15px;
             .card-date {
                 padding: 15px 0px;
-                color: ${defaultTheme.colors.gray.is500};
+                color: ${context.theme.cardDateColor || defaultTheme.colors.gray.is500};
                 font-weight: 300;
                 font-size: 12px;
             }
@@ -35,10 +37,11 @@ const SaganCard = styled.div`
                 width: 100%;
                 overflow: hidden !important;
                 text-overflow: ellipsis;
+                color: ${context.theme.cardTitleColor || defaultTheme.card.titleColor}
             }
 
             .card-content {
-                color: ${defaultTheme.colors.gray.is700};
+                color: ${context.theme.cardContentColor || defaultTheme.colors.gray.is700};
                 font-weight: 300;
                 font-size: 14px;
             }
@@ -51,6 +54,11 @@ const SaganCard = styled.div`
             font-size: 13px;
             padding: 15px;
         }
+        
+        /* Show card shadow */
+        ${context.theme.cardShadow && css`
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+        `}
     `}
 `
 export class Card extends PureComponent {

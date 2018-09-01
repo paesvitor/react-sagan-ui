@@ -6,45 +6,53 @@ colors.secondary = colors.purple.is500
 
 // Font
 export const font = {
-    size: 16,
-    weights: {
-        normal: 400,
-        bold: 700
-    }
+  size: 16,
+  weights: {
+    normal: 400,
+    bold: 700
+  }
 }
 
 export const global = {
-    borderRadius: '3px'
+  borderRadius: '3px',
+  paddingY: 15,
+  paddingX: 15
 }
 
 // Button
 export const button = {
-    sizes: {
-        paddingY: 10,
-        paddingX: 30
-    },
+  sizes: {
+    paddingY: 10,
+    paddingX: 30
+  },
 
-    fontSize: 14,
+  fontSize: 14,
 
-    border: {
-        radius: '1px',
-        size: '1px'
-    },
+  border: {
+    radius: '1px',
+    size: '1px'
+  },
 
-    colors: {
-        default: '#fff',
-        active: {
-            background: colors.black
-        }
+  colors: {
+    default: '#fff',
+    active: {
+      background: colors.black
     }
+  }
+}
+
+export const card = {
+  titleColor: colors.gray.is900,
+  dateColor: colors.gray.is500,
+  contentColor: colors.gray.is800
 }
 
 // General Theme Export
 export const theme = {
-    font,
-    button,
-    colors,
-    global
+  font,
+  button,
+  colors,
+  global
 }
 
 export default theme
