@@ -29,7 +29,7 @@ export const button = {
   fontSize: 14,
 
   border: {
-    radius: '1px',
+    radius: '4px',
     size: '1px'
   },
 
@@ -42,6 +42,8 @@ export const button = {
 }
 
 export const card = {
+  cardShadow: true,
+  headerSize: 220,
   titleColor: colors.gray.is900,
   dateColor: colors.gray.is500,
   contentColor: colors.gray.is800
@@ -52,7 +54,8 @@ export const theme = {
   font,
   button,
   colors,
-  global
+  global,
+  card
 }
 
 export default theme

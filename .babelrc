@@ -8,6 +8,6 @@
   ],
 
   "plugins": [
-    "styled-components"
+    "styled-components","react-docgen"
   ]
 }

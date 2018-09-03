@@ -1,35 +1,36 @@
 import defaultTheme from '../theme'
 import { css } from 'styled-components'
+import { colorTypes, colorWeights } from './constants'
 
-const flatColors = (context) => {
+const flatColors = (context, colorWeight = colorWeights.IS_900, backgroundWeight = colorWeights.IS_400) => {
   return context.type &&
-        ((context.type === 'primary') && css`
-            background-color: ${context.theme.primaryColor || defaultTheme.colors.primary};
-        `) ||
+        ((context.type === colorTypes.PRIMARY) && css`
+        background-color: ${context.theme.primaryColor || defaultTheme.colors.primary};
+    `) ||
 
-        ((context.type === 'secondary') && css`
-            background-color: ${context.theme.secondaryColor || defaultTheme.colors.secondary};
-        `) ||
+        ((context.type === colorTypes.SECONDARY) && css`
+        background-color: ${context.theme.secondaryColor || defaultTheme.colors.secondary};
+    `) ||
 
-        ((context.type === 'success') && css`
-            background-color: ${defaultTheme.colors.green.is400}; 
-            color: ${defaultTheme.colors.green.is800};
-        `) ||
+        ((context.type === colorTypes.SUCCESS) && css`
+        background-color: ${defaultTheme.colors.green[backgroundWeight]}; 
+        color: ${defaultTheme.colors.green[colorWeight]};
+    `) ||
 
-        ((context.type === 'info') && css`
-            background-color: ${defaultTheme.colors.blue.is400}; 
-            color: ${defaultTheme.colors.blue.is800};
-        `) ||
+        ((context.type === colorTypes.INFO) && css`
+        background-color: ${defaultTheme.colors.blue[backgroundWeight]}; 
+        color: ${defaultTheme.colors.blue[colorWeight]};
+    `) ||
 
-        ((context.type === 'warning') && css`
-            background-color: ${defaultTheme.colors.yellow.is400}; 
-            color: ${defaultTheme.colors.yellow.is800};
-        `) ||
+        ((context.type === colorTypes.WARNING) && css`
+        background-color: ${defaultTheme.colors.yellow[backgroundWeight]}; 
+        color: ${defaultTheme.colors.yellow[colorWeight]};
+    `) ||
 
-        ((context.type === 'danger') && css`
-            background-color: ${defaultTheme.colors.red.is400};
-            color: ${defaultTheme.colors.red.is800};
-        `)
+        ((context.type === colorTypes.DANGER) && css`
+        background-color: ${defaultTheme.colors.red[backgroundWeight]};
+        color: ${defaultTheme.colors.red[colorWeight]};
+    `)
 }
 
 export default flatColors

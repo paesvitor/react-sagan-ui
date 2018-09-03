@@ -3,11 +3,15 @@ import { ThemeProvider } from 'styled-components'
 import ButtonGroup from './ButtonGroup'
 import Card from './Card'
 import Colors from './config/colors'
+import Alert from './Alert'
+import { colorWeights } from './config/utils/constants'
 
 export {
   ThemeProvider,
   Button,
   ButtonGroup,
   Card,
-  Colors
+  Colors,
+  Alert,
+  colorWeights
 }

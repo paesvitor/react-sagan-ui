@@ -4,10 +4,11 @@ import FlatButton from './types/FlatButton'
 import InvertedButton from './types/InvertedButton'
 
 const Button = props => props.inverted
-  ? <InvertedButton {...props}>{props.label}</InvertedButton> : <FlatButton {...props}>{props.label}</FlatButton>
+  ? <InvertedButton {...props}>{props.label}</InvertedButton>
+  : <FlatButton {...props}>{props.label}</FlatButton>
 
 Button.propTypes = {
-  // Button Label
+  /** Button label */
   label: PropTypes.string.isRequired,
   // Button color type
   type: PropTypes.oneOf([
@@ -23,17 +24,19 @@ Button.propTypes = {
   // Button corners
   corners: PropTypes.oneOf([
     'rounded',
-    'pill'
+    'pill',
+    'none'
   ]),
   // Button size
   size: PropTypes.oneOf([
     'small',
-    'large'
+    'large',
+    'medium'
   ]),
   // Button is inverted?
   inverted: PropTypes.bool,
-  // Button is a block?
-  block: PropTypes.bool
+  // Button is a fluid?
+  fluid: PropTypes.bool
 }
 
 Button.defaultProps = {

@@ -34,7 +34,7 @@ const BaseButton = styled.button`
         /* 
         Full width Button
         */
-        ${context.block && css`
+        ${context.fluid && css`
             width: 100%;
         `}
 
@@ -43,7 +43,7 @@ const BaseButton = styled.button`
         */
         ${context.corners &&
         ((context.corners === 'rounded') && css`
-            border-radius: ${context.theme.borderRadius || defaultTheme.border.borderRadius};
+            border-radius: ${context.theme.borderRadius || defaultTheme.button.border.radius};
         `) ||
 
         ((context.corners === 'pill') && css`
@@ -55,12 +55,12 @@ const BaseButton = styled.button`
         */
         ${context.size &&
         ((context.size === 'small') && css`
-            font-size: ${fontSize((context.theme.buttonFontSize - 4) || defaultTheme.button.fontSize)};
+            font-size: ${fontSize((context.theme.buttonFontSize - 2) || defaultTheme.button.fontSize - 2)};
             padding: ${buttonPadding((context.theme.buttonSize - 5) || 5)};
         `) ||
 
         ((context.size === 'large') && css`
-            font-size: ${fontSize((context.theme.buttonFontSize + 4) || defaultTheme.button.fontSize)}};
+            font-size: ${fontSize((context.theme.buttonFontSize + 2) || defaultTheme.button.fontSize + 2)}};
             padding: ${buttonPadding((context.theme.buttonSize + 5) || 15)};
         `)}
 

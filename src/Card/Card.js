@@ -56,9 +56,11 @@ const SaganCard = styled.div`
         }
         
         /* Show card shadow */
-        ${context.theme.cardShadow && css`
+        ${context.theme.cardShadow || defaultTheme.card.cardShadow && css`
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
         `}
+
+        ${console.log(context)}
     `}
 `
 export class Card extends PureComponent {
@@ -92,11 +94,20 @@ export class Card extends PureComponent {
 }
 
 Card.propTypes = {
+  /** If empty, will not display anything */
   image: PropTypes.string,
+  /** Card date */
   date: PropTypes.string,
+  /** Card title */
   title: PropTypes.string,
+  /** Card content */
   content: PropTypes.string,
+  /** Card footer, can be anything <Button/> */
   footer: PropTypes.node
+}
+
+Card.defaultProps = {
+  title: 'Card Title'
 }
 
 export default Card
