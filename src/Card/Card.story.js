@@ -9,7 +9,7 @@ const stories = storiesOf('Components', module)
 stories.addDecorator(withKnobs)
 // Knobs as dynamic variables.
 stories.add('Card', withInfo(`
-<h1>Card</h1>
+<h1 class="title">Card</h1>
 
 ~~~js
 import { Card } from 'sagan-ui' 

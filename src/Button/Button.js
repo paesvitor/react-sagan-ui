@@ -10,7 +10,9 @@ const Button = props => props.inverted
 Button.propTypes = {
   /** Button label */
   label: PropTypes.string.isRequired,
-  // Button color type
+  /**
+   * Button color types
+   */
   type: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -21,26 +23,39 @@ Button.propTypes = {
     'light',
     'dark'
   ]),
-  // Button corners
+  /**
+   * Button corner types
+   */
   corners: PropTypes.oneOf([
     'rounded',
     'pill',
     'none'
   ]),
-  // Button size
+  /**
+   * Button sizes
+   */
   size: PropTypes.oneOf([
     'small',
     'large',
     'medium'
   ]),
-  // Button is inverted?
+  /**
+   * Invert button colors
+   */
   inverted: PropTypes.bool,
-  // Button is a fluid?
+  /**
+   * Make button fluid
+   */
   fluid: PropTypes.bool
 }
 
 Button.defaultProps = {
-  label: 'No label'
+  label: 'No label',
+  type: 'primary',
+  corners: 'none',
+  size: 'medium',
+  inverted: false,
+  fluid: false
 }
 
 export default Button

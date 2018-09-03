@@ -14,9 +14,9 @@ const BaseButton = styled.button`
         transition: 0.2s all;
         padding: ${buttonPadding(context.theme.buttonSize || 10)};
         font-size: ${fontSize(context.theme.buttonFontSize || defaultTheme.button.fontSize)};
-        border: none;
         background-color: ${defaultTheme.colors.black};
         color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default};
+        border: 1px solid transparent;
 
         &:focus {
             outline: none;

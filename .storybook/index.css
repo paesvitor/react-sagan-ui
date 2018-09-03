@@ -8,6 +8,8 @@ table {
     border-spacing: 0 !important;
     padding: 2rem 0;
     font-size: 14px;
+    width: 100% !important;
+    table-layout: fixed;
 }
 
 thead {
@@ -21,6 +23,16 @@ th {
 th,
 td {
     padding: 0.5rem !important;
+    word-wrap:break-word;
+    overflow: scroll;
+}
+
+td:nth-child(2) { 
+    font-size: 12px; 
+    /* white-space:nowrap; */
+    /* word-wrap: break-word; */
+    word-break:break-all;
+
 }
 
 table,
@@ -29,4 +41,10 @@ th,
 td,
 tr {
     border: none;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
 }

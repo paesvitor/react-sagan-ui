@@ -17,7 +17,7 @@ const FlatButton = styled(BaseButton)`
       ${flatColors(
     context,
     (context.theme.buttonFlatColorWeight || colorWeights.IS_900),
-    (context.theme.buttonFlatBackgroundWeight || colorWeights.IS_400)
+    (context.theme.buttonFlatBackgroundWeight || colorWeights.IS_300)
   )}
     `}
 `
