@@ -29,7 +29,7 @@ export const button = {
   fontSize: 12,
 
   border: {
-    radius: '4px',
+    radius: '5px',
     size: '1px'
   },
 

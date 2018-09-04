@@ -8,7 +8,6 @@ const BaseButton = styled.button`
         /* 
         Base button configuration 
         */
-        border-radius: ${context.theme.globalBorderRadius || defaultTheme.global.borderRadius};
         display: inline-block;
         cursor: pointer;
         transition: 0.2s all;
@@ -33,7 +32,7 @@ const BaseButton = styled.button`
         */
         ${context.corners &&
         ((context.corners === 'rounded') && css`
-            border-radius: ${context.theme.borderRadius || defaultTheme.button.border.radius};
+            border-radius: ${defaultTheme.button.border.radius};
         `) ||
 
         ((context.corners === 'pill') && css`
