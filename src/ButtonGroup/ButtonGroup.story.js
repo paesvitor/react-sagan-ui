@@ -22,5 +22,7 @@ import { ButtonGroup, Button } from 'sagan-ui'
   return (<ButtonGroup buttonSpacing={buttonSpacing}>
     <Button label='Button 1' type='success' />
     <Button label='Button 2' type='danger' />
+    <Button label='Button 3' type='info' />
+    <Button label='Button 4' type='warning' />
   </ButtonGroup>)
 }))

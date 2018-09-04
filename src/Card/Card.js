@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
-import defaultTheme from '../config/theme'
+import defaultTheme from 'config/theme'
 import PropTypes from 'prop-types'
-import toPx from '../config/utils/toPx'
+import toPx from 'utils/shared/toPx'
 
 const SaganCard = styled.div`
     ${context => css`

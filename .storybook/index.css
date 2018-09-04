@@ -1,7 +1,9 @@
 body {
-    background-color: #fff;
     margin-top: 0;
     padding: 30px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    color: #292929;
 }
 
 table {
@@ -9,7 +11,7 @@ table {
     padding: 2rem 0;
     font-size: 14px;
     width: 100% !important;
-    table-layout: fixed;
+    /* table-layout: fixed; */
 }
 
 thead {
@@ -31,7 +33,7 @@ td:nth-child(2) {
     font-size: 12px; 
     /* white-space:nowrap; */
     /* word-wrap: break-word; */
-    word-break:break-all;
+    width: 100%;
 
 }
 

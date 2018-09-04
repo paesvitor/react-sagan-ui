@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, select } from '@storybook/addon-knobs/react'
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/react'
 import Alert from './Alert'
 import { withInfo } from '@storybook/addon-info'
 
@@ -16,11 +16,13 @@ import { Alert } from 'sagan-ui'
 ~~~
 
 `)(() => {
-  const typeOptions = select('types', ['primary', 'secondary', 'success', 'danger', 'warning', 'info'], 'success')
+  const typeOptions = select('types', ['success', 'danger', 'warning', 'info'], 'success')
   const label = text('label', 'This is a default Alert!')
+  const showDismiss = boolean('show dimiss', true)
 
   return (<Alert
     type={typeOptions}
     label={label}
+    showDismiss={showDismiss}
   />)
 }))

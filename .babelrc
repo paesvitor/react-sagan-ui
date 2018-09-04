@@ -8,6 +8,11 @@
   ],
 
   "plugins": [
-    "styled-components","react-docgen"
+    "styled-components","react-docgen",
+    ["module-resolver", {
+      "root": ["./src/**"],
+      "alias": {
+      }
+    }]
   ]
 }

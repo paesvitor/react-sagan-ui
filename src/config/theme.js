@@ -26,7 +26,7 @@ export const button = {
     paddingX: 30
   },
 
-  fontSize: 14,
+  fontSize: 12,
 
   border: {
     radius: '4px',
@@ -49,13 +49,20 @@ export const card = {
   contentColor: colors.gray.is800
 }
 
+export const alert = {
+  font: {
+    size: 13
+  }
+}
+
 // General Theme Export
 export const theme = {
   font,
   button,
   colors,
   global,
-  card
+  card,
+  alert
 }
 
 export default theme

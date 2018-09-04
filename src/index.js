@@ -4,7 +4,7 @@ import ButtonGroup from './ButtonGroup'
 import Card from './Card'
 import Colors from './config/colors'
 import Alert from './Alert'
-import { colorWeights } from './config/utils/constants'
+import { colorWeights } from 'utils/constants'
 
 export {
   ThemeProvider,

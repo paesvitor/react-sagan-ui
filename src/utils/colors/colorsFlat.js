@@ -1,6 +1,6 @@
-import defaultTheme from '../theme'
+import defaultTheme from 'config/theme'
 import { css } from 'styled-components'
-import { colorTypes, colorWeights } from './constants'
+import { colorTypes, colorWeights } from 'utils/constants'
 
 const flatColors = (context, colorWeight = colorWeights.IS_900, backgroundWeight = colorWeights.IS_400) => {
   return context.type &&
@@ -14,22 +14,22 @@ const flatColors = (context, colorWeight = colorWeights.IS_900, backgroundWeight
 
         ((context.type === colorTypes.SUCCESS) && css`
         background-color: ${defaultTheme.colors.green[backgroundWeight]}; 
-        color: ${defaultTheme.colors.green[colorWeight]};
+        color: #fff;
     `) ||
 
         ((context.type === colorTypes.INFO) && css`
         background-color: ${defaultTheme.colors.blue[backgroundWeight]}; 
-        color: ${defaultTheme.colors.blue[colorWeight]};
+        color: #fff;
     `) ||
 
         ((context.type === colorTypes.WARNING) && css`
         background-color: ${defaultTheme.colors.yellow[backgroundWeight]}; 
-        color: ${defaultTheme.colors.yellow[colorWeight]};
+        color: #000;
     `) ||
 
         ((context.type === colorTypes.DANGER) && css`
         background-color: ${defaultTheme.colors.red[backgroundWeight]};
-        color: ${defaultTheme.colors.red[colorWeight]};
+        color: #fff;
     `)
 }
 

@@ -22,10 +22,12 @@ import { Button } from 'sagan-ui'
   const fluid = boolean('fluid', false)
   const cornerOptions = select('corners', ['rounded', 'pill', 'none'], 'none')
   const sizeOptions = select('sizes', ['small', 'large', 'medium'], 'medium')
+  const disabled = boolean('disabled', false)
 
   return (<Button
     type={typeOptions}
     label={label}
+    disabled={disabled}
     inverted={inverted}
     corners={cornerOptions}
     size={sizeOptions}

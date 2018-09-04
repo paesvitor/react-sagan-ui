@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
-import defaultTheme from '../../config/theme'
+import defaultTheme from 'config/theme'
 import BaseButton from './BaseButton'
-import invertedColors from '../../config/utils/invertedColors'
+import colorsInverted from 'utils/colors/colorsInverted'
+import buttonsHover from 'utils/buttons/buttonsHover'
 
 const InvertedButton = styled(BaseButton)`
    ${context => css`
@@ -12,51 +13,49 @@ const InvertedButton = styled(BaseButton)`
         @returns    - return all inverted color types 
         @params     - context
         */
-        ${invertedColors(context)}
-
+        ${colorsInverted(context)}
+        ${buttonsHover(context)}
         /* 
-        Inverted Button Hover Styles
+        Inverted Button Font Colors
          */
+        &:hover {
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+        }
+
          ${context.type &&
         ((context.type === 'primary') && css`
             &:hover {
-                background-color: ${context.theme.primaryColor || defaultTheme.colors.primary};
                 color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default}
             }
         `) ||
 
         ((context.type === 'secondary') && css`
             &:hover {
-                background-color: ${context.theme.secondaryColor || defaultTheme.colors.secondary};
                 color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default}
             }
         `) ||
 
         ((context.type === 'success') && css`
             &:hover {
-                background-color: ${defaultTheme.colors.green.is400}; 
-                color: ${defaultTheme.colors.green.is800};
+                color: ${defaultTheme.button.colors.default};
             }
         `) ||
 
         ((context.type === 'info') && css`
             &:hover {
-                background-color: ${defaultTheme.colors.blue.is400}; 
-                color: ${defaultTheme.colors.blue.is800};
+                color: ${defaultTheme.button.colors.default};
             }
         `) ||
 
         ((context.type === 'warning') && css`
             &:hover {
-                background-color: ${defaultTheme.colors.yellow.is400}; 
-                color: ${defaultTheme.colors.yellow.is800};
+                color: ${defaultTheme.colors.gray.is900};
             }
         `) ||
 
         ((context.type === 'danger') && css`
             &:hover {
-                background-color: ${defaultTheme.colors.red.is400}; 
-                color: ${defaultTheme.colors.red.is800};
+                color: ${defaultTheme.button.colors.default};
             }
         `)}
     `}

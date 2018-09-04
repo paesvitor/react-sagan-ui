@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import defaultTheme from '../../config/theme'
-import buttonPadding from '../../config/utils/buttonPadding'
-import fontSize from '../../config/utils/fontSize'
+import defaultTheme from 'config/theme'
+import buttonsPadding from 'utils/buttons/buttonsPadding'
+import toPx from 'utils/shared/toPx'
 
 const BaseButton = styled.button`
     ${context => css`
@@ -12,25 +12,18 @@ const BaseButton = styled.button`
         display: inline-block;
         cursor: pointer;
         transition: 0.2s all;
-        padding: ${buttonPadding(context.theme.buttonSize || 10)};
-        font-size: ${fontSize(context.theme.buttonFontSize || defaultTheme.button.fontSize)};
+        padding: ${buttonsPadding(context.theme.buttonSize || 10)};
+        font-size: ${toPx(context.theme.buttonFontSize || defaultTheme.button.fontSize)};
         background-color: ${defaultTheme.colors.black};
         color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default};
         border: 1px solid transparent;
-
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+        
         &:focus {
             outline: none;
         }
-
-        &:active {
-            transition: 0s all;
-            transform: translateY(1px);
-        }
-
-        &:hover {
-            opacity: 0.8;
-        }
-
         /* 
         Full width Button
         */
@@ -55,13 +48,13 @@ const BaseButton = styled.button`
         */
         ${context.size &&
         ((context.size === 'small') && css`
-            font-size: ${fontSize((context.theme.buttonFontSize - 2) || defaultTheme.button.fontSize - 2)};
-            padding: ${buttonPadding((context.theme.buttonSize - 5) || 5)};
+            font-size: ${toPx((context.theme.buttonFontSize - 2) || defaultTheme.button.fontSize - 2)};
+            padding: ${buttonsPadding((context.theme.buttonSize - 5) || 5)};
         `) ||
 
         ((context.size === 'large') && css`
-            font-size: ${fontSize((context.theme.buttonFontSize + 2) || defaultTheme.button.fontSize + 2)}};
-            padding: ${buttonPadding((context.theme.buttonSize + 5) || 15)};
+            font-size: ${toPx((context.theme.buttonFontSize + 2) || defaultTheme.button.fontSize + 2)}};
+            padding: ${buttonsPadding((context.theme.buttonSize + 5) || 15)};
         `)}
 
     `}

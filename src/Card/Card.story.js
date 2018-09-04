@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text } from '@storybook/addon-knobs/react'
 import Card from './Card'
+import Button from '../Button'
 import { withInfo } from '@storybook/addon-info'
 
 const stories = storiesOf('Components', module)
@@ -27,6 +28,6 @@ import { Card } from 'sagan-ui'
     title={title}
     content={content}
     date={date}
-    footer={footer}
+    footer={<Button label={footer} size='small' />}
   />)
 }))

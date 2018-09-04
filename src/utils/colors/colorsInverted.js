@@ -1,4 +1,4 @@
-import defaultTheme from '../theme'
+import defaultTheme from 'config/theme'
 import { css } from 'styled-components'
 
 const invertedColors = (context) => {

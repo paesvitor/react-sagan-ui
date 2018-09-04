@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import toPx from '../config/utils/toPx'
+import toPx from 'utils/shared/toPx'
 
 const SaganButtonGroup = styled.div`
     ${context => css`
