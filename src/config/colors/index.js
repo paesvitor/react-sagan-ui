@@ -5,6 +5,8 @@ import purple from './purple'
 import blue from './blue'
 import yellow from './yellow'
 import gray from './gray'
+import orange from './orange'
+import indigo from './indigo'
 
 const white = '#fff'
 const black = '#000'
@@ -18,5 +20,7 @@ export default {
   black,
   blue,
   yellow,
-  gray
+  gray,
+  orange,
+  indigo
 }

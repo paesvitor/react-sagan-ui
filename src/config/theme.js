@@ -1,8 +1,8 @@
 // Colors
 import colors from './colors'
 
-colors.primary = colors.pink.is500
-colors.secondary = colors.purple.is500
+colors.primary = colors.orange.is500
+colors.secondary = colors.indigo.is500
 
 // Font
 export const font = {
