@@ -58,6 +58,17 @@ const InvertedButton = styled(BaseButton)`
                 color: ${defaultTheme.button.colors.default};
             }
         `)}
+
+        &:disabled {
+        box-shadow: none;
+        border-color: ${defaultTheme.colors.gray.is400};
+        color: ${defaultTheme.colors.gray.is400};
+            &:hover {
+                background: unset;
+                border-color: ${defaultTheme.colors.gray.is400};
+                cursor: not-allowed;
+            }
+        }
     `}
 `
 

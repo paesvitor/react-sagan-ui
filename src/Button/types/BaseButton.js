@@ -21,16 +21,13 @@ const BaseButton = styled.button`
         text-transform: uppercase;
         font-weight: bold;
         
-        &:focus {
-            outline: none;
-        }
+        &:focus { outline: none;}
         /* 
         Full width Button
         */
         ${context.fluid && css`
             width: 100%;
         `}
-
         /* 
         Corner Types 
         */
