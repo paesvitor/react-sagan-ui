@@ -3,10 +3,6 @@
 These configs applies to all Button elements on the application
 
 
-> Defines Buttons border size
-
-    buttonBorderSize:  @Number - [Default: 1]
-
  > Defines Buttons size
 
     buttonSize:  @Number - [Default: 10]

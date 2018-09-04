@@ -4,10 +4,13 @@ import { withKnobs, number } from '@storybook/addon-knobs/react'
 import ButtonGroup from './ButtonGroup'
 import Button from '../Button'
 import { withInfo } from '@storybook/addon-info'
+import { withReadme } from 'storybook-readme';
+import MD from './ButtonGroup.md'
 
 const stories = storiesOf('Components', module)
 
 stories.addDecorator(withKnobs)
+stories.addDecorator(withReadme(MD))
 // Knobs as dynamic variables.
 stories.add('Button Group', withInfo(`
 <h1 class="title">Button Group</h1>
