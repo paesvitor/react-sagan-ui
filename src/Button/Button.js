@@ -19,9 +19,7 @@ Button.propTypes = {
     'success',
     'danger',
     'warning',
-    'info',
-    'light',
-    'dark'
+    'info'
   ]),
   /**
    * Button corner types

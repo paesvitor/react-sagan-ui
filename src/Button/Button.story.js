@@ -3,10 +3,13 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/react'
 import Button from './Button'
 import { withInfo } from '@storybook/addon-info'
+import { withReadme } from 'storybook-readme';
+import ButtonMD from './Button.md'
 
 const stories = storiesOf('Components', module)
 
 stories.addDecorator(withKnobs)
+stories.addDecorator(withReadme(ButtonMD))
 // Knobs as dynamic variables.
 stories.add('Button', withInfo(`
 <h1 class="title">Button</h1>

@@ -17,12 +17,12 @@ import { Alert } from 'sagan-ui'
 
 `)(() => {
   const typeOptions = select('types', ['success', 'danger', 'warning', 'info'], 'success')
-  const label = text('label', 'This is a default Alert!')
+  const AlertText = text('text', 'This is a default Alert!')
   const showDismiss = boolean('show dimiss', true)
 
   return (<Alert
     type={typeOptions}
-    label={label}
+    text={AlertText}
     showDismiss={showDismiss}
   />)
 }))
