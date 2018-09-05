@@ -17,7 +17,23 @@
       "route": "/src-alert-alert",
       "order": 0,
       "menu": null,
-      "headings": []
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "alert",
+          "value": "Alert"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 2,
+          "slug": "theme-config-props",
+          "value": "Theme config props"
+        }
+      ]
     },
     "src/Button/Button.mdx": {
       "name": "Button",
@@ -28,7 +44,23 @@
       "route": "/src-button-button",
       "order": 0,
       "menu": null,
-      "headings": []
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 2,
+          "slug": "theme-config-props",
+          "value": "Theme config props"
+        }
+      ]
     }
   }
 }

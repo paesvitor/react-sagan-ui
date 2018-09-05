@@ -21,7 +21,8 @@
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "docz": "./node_modules/.bin/docz dev"
+    "docz-dev": "./node_modules/.bin/docz dev",
+    "docz-build": "./node_modules/.bin/docz build"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
