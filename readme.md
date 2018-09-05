@@ -20,8 +20,13 @@ A UI component library for Farfetch for test purpose
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider, Button } from 'sagan-ui';
-// Provides library custom configuration
-import themeConfig from 'path-to-your-themeConfig-file';
+//import themeConfig from 'path-to-your-themeConfig-file';
+
+// Theme configuration to change default values
+const themeConfig = {
+    // Override default buttonSize [12] and changes global buttonSize to 18
+    buttonSize: 18
+}
 
 ReactDOM.render(
     <ThemeProvider theme={themeConfig}>
@@ -29,18 +34,6 @@ ReactDOM.render(
     </ThemeProvider>,
     mountNode
 );
-~~~
-
-### Configuring themeConfig.js file
- - Each component have your own custom props, check readme tab for further information
-
-~~~js
-const themeConfig = {
-    // Intercepts default buttonSize [12] and changes global buttonSize to 18
-    buttonSize: 18
-}
-
-export default themeConfig
 ~~~
 
 ## Documentation
