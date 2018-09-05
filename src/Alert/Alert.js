@@ -16,7 +16,7 @@ const SaganAlert = styled.div`
     ${context => css`
         padding: 15px;
         border-radius: 2px;
-        border-left: 5px solid;
+        border-left: 6px solid;
         ${alertColors(context, colorsConfig)}
         display: flex;
         font-size: ${toPx(context.theme.alertFontSize || defaultTheme.alert.font.size)};
