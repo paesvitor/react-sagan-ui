@@ -12,8 +12,6 @@ stories.addDecorator(withKnobs)
 stories.addDecorator(withReadme(ButtonMD))
 // Knobs as dynamic variables.
 stories.add('Button', withInfo(`
-<h1 class="title">Button</h1>
-
 ~~~js
 import { Button } from 'sagan-ui' 
 ~~~

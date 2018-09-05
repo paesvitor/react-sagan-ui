@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import alertColors from 'Alert/utils/alertColors'
 import toPx from 'utils/shared/toPx'
 import defaultTheme from 'config/theme'
-import IconClose from '@material-ui/icons/Close'
+// import IconClose from '@material-ui/icons/Close'
 
 // Defines colors config for alertColors()
 const colorsConfig = {
@@ -39,7 +39,7 @@ const SaganAlert = styled.div`
 
 const Alert = props => <SaganAlert {...props}>
     <div className='alert-label'>{props.text}</div>
-    {props.showDismiss ? <div onClick={() => props.dismissAction()} className='alert-dismiss'><IconClose /></div> : null}
+    {props.showDismiss ? <div onClick={() => props.dismissAction()} className='alert-dismiss'>X</div> : null}
 </SaganAlert>
 
 Alert.propTypes = {

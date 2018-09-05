@@ -12,7 +12,7 @@ setOptions({
     showStoriesPanel: true,
     showAddonPanel: true,
     showSearchBox: false,
-    addonPanelInRight: true,
+    addonPanelInRight: false,
     sortStoriesByKind: true
 });
 
@@ -32,8 +32,23 @@ setDefaults({
 });
 
 function loadStories() {
-  req.keys().forEach((filename) => req(filename))
+    req.keys().forEach((filename) => req(filename))
 }
+setDefaults({
+    header: true,
+    maxPropsIntoLine: 4,
+    styles: {
+        header: {
+            h1: {
+                fontSize: '12px'
+            },
+            h2: {
+                fontWeight: 'bold'
+            }
+        },
+        
+    }
+});
 
 setAddon(infoAddon);
 
