@@ -1,8 +1,12 @@
 {
   "config": {
-    "title": "Sagan Ui",
-    "description": "React ui components kit",
-    "themeConfig": {},
+    "title": "Sagan UI",
+    "description": "This is my awesome documentation",
+    "themeConfig": {
+      "colors": {
+        "primary": "#3F51B5"
+      }
+    },
     "ordering": "descending",
     "version": "0.0.3",
     "repository": "https://github.com/paesvitor/sagan"

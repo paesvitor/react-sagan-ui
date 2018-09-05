@@ -21,6 +21,7 @@ const SaganAlert = styled.div`
         display: flex;
         font-size: ${toPx(context.theme.alertFontSize || defaultTheme.alert.font.size)};
         align-items: center;
+        margin: 15px 0px;
 
         .alert-label {
           flex: 1;
@@ -46,7 +47,7 @@ const Alert = props => <SaganAlert {...props}>
 </SaganAlert>
 
 Alert.propTypes = {
-    /** Alert Label */
+    /** Alert text */
     text: PropTypes.string.isRequired,
     /** Alert color type */
     type: PropTypes.oneOf([
@@ -55,9 +56,9 @@ Alert.propTypes = {
         'warning',
         'info'
     ]),
-    /** Show dismiss button */
+    /** Show or hide dismiss button */
     showDismiss: PropTypes.bool,
-    /** Dismiss button action */
+    /** What action dismiss button will take */
     dismissAction: PropTypes.func
 }
 
