@@ -1,7 +1,7 @@
 # Sagan UI
 
 ![NPM](https://img.shields.io/npm/v/sagan-ui.svg)
-[![Docs](https://img.shields.io/badge/read-docs-blue.svg)](https://paesvitor.github.io/sagan)
+[![Docs](https://img.shields.io/badge/read-docs-blue.svg)](https://xenodochial-einstein-eda26f.netlify.com/)
 
 
 A UI component library for Farfetch for test purpose
