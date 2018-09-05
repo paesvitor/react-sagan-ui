@@ -28,6 +28,7 @@ ReactDOM.render(
 ~~~
 
 ### Configuring themeConfig.js file
+ - Each component have your own custom props, check readme tab for further information
 
 ~~~js
 const themeConfig = {
