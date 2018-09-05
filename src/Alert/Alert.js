@@ -29,7 +29,10 @@ const SaganAlert = styled.div`
         .alert-dismiss {
             display: flex;
             cursor: pointer;
-            border: 1px solid #fff;
+            /* border: 1px solid #fff; */
+            font-size: 14px;
+            line-height: 0;
+            font-weight: bold;
             border-radius: 50%;
             padding: 3px;
             svg { font-size: 18px }
@@ -39,7 +42,7 @@ const SaganAlert = styled.div`
 
 const Alert = props => <SaganAlert {...props}>
     <div className='alert-label'>{props.text}</div>
-    {props.showDismiss ? <div onClick={() => props.dismissAction()} className='alert-dismiss'>X</div> : null}
+    {props.showDismiss ? <div onClick={() => props.dismissAction()} className='alert-dismiss'>x</div> : null}
 </SaganAlert>
 
 Alert.propTypes = {

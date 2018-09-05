@@ -1,6 +1,6 @@
 body {
     margin-top: 0;
-    padding: 30px;
+    padding: 15px;
     font-family: 'Open Sans', sans-serif;
     background-color: #fff;
     color: #292929;
@@ -52,4 +52,8 @@ tr {
 
 #root h2 {
     margin-bottom: 15px !important;
+}
+
+ul li {
+    list-style: circle;
 }

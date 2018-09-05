@@ -28,6 +28,7 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.0.0",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-info": "^4.0.0-alpha.20",
     "@storybook/addon-knobs": "^3.4.10",

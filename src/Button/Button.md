@@ -1,4 +1,4 @@
-## **Available props to inject on Theme Config**
+### **Available themeConfig props**
 
 These configs applies to all Button elements on the application
 
