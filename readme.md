@@ -1,6 +1,9 @@
 # Sagan UI
 
-A UI component library for Farfetch test propouses
+![NPM](https://img.shields.io/npm/v/sagan-ui.svg)
+
+
+A UI component library for Farfetch test propouses 
 
 ## Install
 
