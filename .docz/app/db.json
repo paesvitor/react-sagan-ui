@@ -1,0 +1,34 @@
+{
+  "config": {
+    "title": "Sagan Ui",
+    "description": "React ui components kit",
+    "themeConfig": {},
+    "ordering": "descending",
+    "version": "0.0.3",
+    "repository": "https://github.com/paesvitor/sagan"
+  },
+  "entries": {
+    "src/Alert/Alert.mdx": {
+      "name": "Alert",
+      "id": "05ff1cfb0cfca65a9a76fc6d72083a93",
+      "filepath": "src/Alert/Alert.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/Alert/Alert.mdx",
+      "slug": "src-alert-alert",
+      "route": "/src-alert-alert",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/Button/Button.mdx": {
+      "name": "Button",
+      "id": "84b7c5fedddc508968c380b1bba30402",
+      "filepath": "src/Button/Button.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/Button/Button.mdx",
+      "slug": "src-button-button",
+      "route": "/src-button-button",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    }
+  }
+}
