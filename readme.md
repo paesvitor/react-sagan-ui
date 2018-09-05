@@ -4,7 +4,7 @@
 [![Docs](https://img.shields.io/badge/read-docs-blue.svg)](https://paesvitor.github.io/sagan)
 
 
-A UI component library for Farfetch test propouses 
+A UI component library for Farfetch for test purpose
 
 ## Install
 
