@@ -4,16 +4,68 @@ name: Button
 
 import { Playground, PropsTable } from 'docz'
 import Button from './Button'
+import ButtonGroup from '../ButtonGroup'
 
 # Button
 
 <Playground>
-  <Button label="secondary"/>
+  <Button label="Default Button"/>
 </Playground>
 
 ## Props
 
 <PropsTable of={Button} />
+
+## Variations
+
+#### Flat Button
+
+<Playground>
+  <ButtonGroup>
+    <Button label="primary" type="primary"/>
+    <Button label="secondary" type="secondary"/>
+    <Button label="success" type="success"/>
+    <Button label="danger" type="danger"/>
+    <Button label="warning" type="warning"/>
+    <Button label="info" type="info"/>
+  </ButtonGroup>
+</Playground>
+
+#### Inverted Button
+
+<Playground>
+  <ButtonGroup>
+    <Button inverted label="primary" type="primary"/>
+    <Button inverted label="secondary" type="secondary"/>
+    <Button inverted label="success" type="success"/>
+    <Button inverted label="danger" type="danger"/>
+    <Button inverted label="warning" type="warning"/>
+    <Button inverted label="info" type="info"/>
+  </ButtonGroup>
+</Playground>
+
+#### Corners
+
+<Playground>
+  <ButtonGroup>
+    <Button corners="pill" label="Pill" type="primary"/>
+    <Button corners="rounded" label="Rounded" type="secondary"/>
+  </ButtonGroup>
+</Playground>
+
+#### Sizes
+
+<Playground>
+  <Button size="small" label="Small" type="primary"/>
+  <Button label="Medium" type="primary"/>
+  <Button size="large" label="Large" type="primary"/>
+</Playground>
+
+#### Fluid
+
+<Playground>
+  <Button fluid label="Fluid Button" type="primary"/>
+</Playground>
 
 ## Theme config props
 
@@ -34,6 +86,4 @@ These configs applies to all Button elements on the application
 
     //Defines if Buttons have uppercase font
     buttonUppercaseFont:  @Boolean - [Default: true]
-
-
 

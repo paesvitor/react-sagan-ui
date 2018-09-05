@@ -19,6 +19,8 @@ const BaseButton = styled.button`
         position: relative;
         text-transform: uppercase;
         font-weight: bold;
+        display: block;
+        margin: 15px 0px;
         
         &:focus { outline: none;}
         /* 
