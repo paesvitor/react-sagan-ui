@@ -10,6 +10,7 @@ const flatColors = (context, colorWeight = colorWeights.IS_900, backgroundWeight
 
         ((context.type === colorTypes.SECONDARY) && css`
         background-color: ${context.theme.secondaryColor || defaultTheme.colors.secondary};
+        color: ${context.theme.secondaryButtonFontColor || '#fff'};
     `) ||
 
         ((context.type === colorTypes.SUCCESS) && css`

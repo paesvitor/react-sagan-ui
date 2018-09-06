@@ -1,10 +1,10 @@
 import Button from './Button'
-import { ThemeProvider } from 'styled-components'
 import ButtonGroup from './ButtonGroup'
 import Card from './Card'
 import Colors from './config/colors'
 import Alert from './Alert'
 import { colorWeights } from 'utils/constants'
+import ThemeProvider from './ThemeProvider'
 
 export {
   ThemeProvider,

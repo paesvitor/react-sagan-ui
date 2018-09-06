@@ -17,10 +17,11 @@ const BaseButton = styled.button`
         color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default};
         border: 1px solid transparent;
         position: relative;
-        text-transform: uppercase;
+        border-radius: ${toPx(context.theme.buttonBorderRadius || defaultTheme.button.border.radius)};
         font-weight: bold;
         display: block;
-        margin: 15px 0px;
+        font-family: inherit;
+        /* margin: 15px 0px; */
         
         &:focus { outline: none;}
         /* 
@@ -28,6 +29,10 @@ const BaseButton = styled.button`
         */
         ${context.fluid && css`
             width: 100%;
+        `}
+
+        ${context.theme.buttonUppercaseFont && css`
+        text-transform: uppercase;
         `}
         /* 
         Corner Types 
