@@ -11,6 +11,9 @@ const makeButtonFontColor = (props) => {
         case 'secondary':
             color = theme.secondaryButtonFontColor || defaultTheme.button.fontColor
             break
+        case 'warning':
+            color = '#000'
+            break
         default:
             color = defaultTheme.button.fontColor
     }

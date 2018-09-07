@@ -70,7 +70,14 @@ import ButtonGroup from '../ButtonGroup'
 #### Disabled
 
 <Playground>
-  <Button disabled label="Disabled"/>
+  <ButtonGroup>
+    <Button disabled label="Disabled"/>
+    <Button disabled label="Disabled" type="secondary"/>
+    <Button disabled label="Disabled" type="success"/>
+    <Button disabled label="Disabled" type="danger"/>
+    <Button disabled label="Disabled" type="warning"/>
+    <Button disabled label="Disabled" type="info"/>
+  </ButtonGroup>
 </Playground>
 
 ## Theme config props
@@ -107,3 +114,9 @@ These configs applies to all Button elements on the application
 
     // Defines how much to darken or lighten button when clicked
     buttonActiveAmount: @Number - [Default: 0.4]
+
+    // Defines button hover style
+    buttonFlatHoverType: @Enum ['inverted'] - [Default: null]
+
+    // Defines button animation transition
+    buttonTransition: @Number - [Default: 0.2]

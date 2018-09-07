@@ -13,7 +13,7 @@ const BaseButton = styled.button`
         */
         cursor: pointer;
         display: inline-block;
-        transition: 0.2s all;
+        transition: ${(props.theme.buttonTransition || defaultTheme.button.transition) + 's'};
         padding: ${makeButtonPadding(props.theme.buttonSize || 10)};
         font-size: ${toPx(props.theme.buttonFontSize || defaultTheme.button.fontSize)};
         color: ${makeButtonFontColor(props)};
@@ -56,13 +56,13 @@ const BaseButton = styled.button`
         /* Disabled styles */
         &:disabled {
             box-shadow: none;
-            background-color: ${makeColor(props, -0.9)};
+            background-color: ${makeColor(props, -0.5)};
             cursor: not-allowed;
             border: none;
             color: #fff;
             &:hover {
-                background-color: ${makeColor(props, -0.9)};
-                color: #fff !important;
+                background-color: ${makeColor(props, -0.5)};
+                /* color: #fff !important; */
             }
         }
     `}

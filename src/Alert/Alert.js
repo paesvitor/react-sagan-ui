@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import alertColors from 'Alert/utils/alertColors'
 import toPx from 'utils/shared/toPx'
 import defaultTheme from 'config/theme'
 import makeColor from 'utils/colors/makeColor'
@@ -13,11 +12,11 @@ const SaganAlert = styled.div`
         border-radius: 2px;
         border-left: 6px solid ${makeColor(props, 0.3)};
         color: ${props.type === 'warning' ? '#000' : '#fff'};
-        display: flex;
         font-size: ${toPx(props.theme.alertFontSize || defaultTheme.alert.font.size)};
         align-items: center;
         margin: 15px 0px;
         background-color: ${makeColor(props)};
+        display: ${props.show ? 'flex' : 'none'};
 
         .alert-label {
           flex: 1;
@@ -55,14 +54,17 @@ Alert.propTypes = {
     /** Show or hide dismiss button */
     showDismiss: PropTypes.bool,
     /** What action dismiss button will take */
-    dismissAction: PropTypes.func
+    dismissAction: PropTypes.func,
+    /** Defines if alert must de shown or not */
+    show: PropTypes.bool
 }
 
 Alert.defaultProps = {
     text: 'No Text',
     dismissAction: () => window.alert('Alert Dismiss'),
     type: 'success',
-    showDismiss: true
+    showDismiss: true,
+    show: true
 }
 
 export default Alert

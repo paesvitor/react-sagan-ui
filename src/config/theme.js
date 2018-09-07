@@ -59,7 +59,7 @@ export const button = {
         paddingY: 10,
         paddingX: 30
     },
-
+    transition: 0.2,
     fontSize: 12,
     fontColor: colors.white,
 
@@ -70,7 +70,7 @@ export const button = {
 
     colors: {
         default: colors.white,
-        hoverAmount: -0.1,
+        hoverAmount: -0.15,
         activeAmount: 0.4
     }
 }

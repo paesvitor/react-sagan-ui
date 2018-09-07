@@ -9,7 +9,7 @@ const SaganCard = styled.div`
         word-wrap: break-word;
         margin-bottom: 15px;
         background-color: #fff;
-        border-radius: ${context.theme.globalBorderRadius || defaultTheme.global.borderRadius};
+        border-radius: ${toPx(context.theme.globalBorderRadius || defaultTheme.global.borderRadius)};
         .card-header {
             background: ${defaultTheme.colors.gray.is200};
             height: ${toPx(context.theme.cardHeaderSize || defaultTheme.card.headerSize)};
@@ -48,7 +48,6 @@ const SaganCard = styled.div`
         }
 
         .card-footer {
-            margin-top: 15px;
             color: ${context.theme.primaryColor || defaultTheme.colors.primary};
             font-weight: bold;
             font-size: 13px;
@@ -68,26 +67,26 @@ export class Card extends PureComponent {
     const { image, date, title, content, footer } = this.props
 
     return (
-      <SaganCard>
+      <SaganCard {...this.props}>
         {image ? <div className='card-header' style={{backgroundImage: `url(${image})`}} /> : null}
 
         <div className='card-body'>
-          <div className='card-date'>
+          {date ? <div className='card-date'>
             {date}
-          </div>
+          </div> : null}
 
-          <div className='card-title'>
+          {title ? <div className='card-title'>
             {title}
-          </div>
+          </div> : null}
 
-          <div className='card-content'>
+          {content ? <div className='card-content'>
             {content}
-          </div>
+          </div> : null}
         </div>
 
-        <div className='card-footer'>
+        {footer ? <div className='card-footer'>
           {footer}
-        </div>
+        </div> : null}
       </SaganCard>
     )
   }
@@ -107,7 +106,6 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
-  title: 'Card Title'
 }
 
 export default Card
