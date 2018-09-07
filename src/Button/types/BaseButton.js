@@ -1,65 +1,53 @@
 import styled, { css } from 'styled-components'
 import defaultTheme from 'config/theme'
-import buttonsPadding from 'utils/buttons/buttonsPadding'
+import buttonsPadding from 'utils/buttons/makeButtonsPadding'
 import toPx from 'utils/shared/toPx'
 
 const BaseButton = styled.button`
-    ${context => css`
+    ${props => css`
         /* 
-        Base button configuration 
+        * --> Base Button
         */
-        display: inline-block;
         cursor: pointer;
+        display: inline-block;
         transition: 0.2s all;
-        padding: ${buttonsPadding(context.theme.buttonSize || 10)};
-        font-size: ${toPx(context.theme.buttonFontSize || defaultTheme.button.fontSize)};
-        background-color: ${defaultTheme.colors.black};
-        color: ${context.theme.buttonFontColor || defaultTheme.button.colors.default};
+        padding: ${buttonsPadding(props.theme.buttonSize || 10)};
+        font-size: ${toPx(props.theme.buttonFontSize || defaultTheme.button.fontSize)};
+        color: ${props.theme.buttonFontColor || defaultTheme.button.colors.default};
         border: 1px solid transparent;
-        position: relative;
-        border-radius: ${toPx(context.theme.buttonBorderRadius || defaultTheme.button.border.radius)};
+        border-radius: ${toPx(props.theme.buttonBorderRadius || defaultTheme.button.border.radius)};
         font-weight: bold;
-        display: block;
-        font-family: inherit;
-        /* margin: 15px 0px; */
-        
-        &:focus { outline: none;}
         /* 
-        Full width Button
+        * --> Global Button Props
         */
-        ${context.fluid && css`
-            width: 100%;
-        `}
-
-        ${context.theme.buttonUppercaseFont && css`
-        text-transform: uppercase;
-        `}
+        /* Button has uppercase font? */
+        ${props.theme.buttonUppercaseFont && 'text-transform: uppercase'}
         /* 
-        Corner Types 
+        * --> Single Button Props
         */
-        ${context.corners &&
-        ((context.corners === 'rounded') && css`
-            border-radius: ${defaultTheme.button.border.radius};
-        `) ||
-
-        ((context.corners === 'pill') && css`
-            border-radius: 20px;
-        `)}}};
-
-        /* 
-        Sizes Types 
-        */
-        ${context.size &&
-        ((context.size === 'small') && css`
-            font-size: ${toPx((context.theme.buttonFontSize - 2) || defaultTheme.button.fontSize - 2)};
-            padding: ${buttonsPadding((context.theme.buttonSize - 5) || 5)};
-        `) ||
-
-        ((context.size === 'large') && css`
-            font-size: ${toPx((context.theme.buttonFontSize + 2) || defaultTheme.button.fontSize + 2)}};
-            padding: ${buttonsPadding((context.theme.buttonSize + 5) || 15)};
-        `)}
-
+        /* Full width Button*/
+        ${props.fluid && 'width: 100%'}
+        /* Corner Types */
+        ${props.corners &&
+            ((props.corners === 'rounded') && `
+                border-radius: ${defaultTheme.button.border.radius}
+            `) ||
+            ((props.corners === 'pill') && `
+                border-radius: 20px
+            `)
+        }}};
+        /* Sizes Types */
+        ${props.size &&
+            ((props.size === 'small') && `
+                font-size: ${toPx((props.theme.buttonFontSize - 2) || defaultTheme.button.fontSize - 2)};
+                padding: ${buttonsPadding((props.theme.buttonSize - 5) || 5)};
+            `) ||
+            ((props.size === 'large') && `
+                font-size: ${toPx((props.theme.buttonFontSize + 2) || defaultTheme.button.fontSize + 2)}};
+                padding: ${buttonsPadding((props.theme.buttonSize + 5) || 15)};
+            `)
+        }
+        &:focus { outline: none }
     `}
 `
 

@@ -12,8 +12,25 @@ const flatButtonHovers = (context) => {
 
   return context.type &&
         ((context.type === colorTypes.PRIMARY) && css`
-            &:hover { background-color: ${primaryColor.darken(darkenAmountHover).hex()};}
-            &:active { background-color: ${primaryColor.darken(darkenAmountActive).hex()};}
+            &:hover { 
+                ${((context.theme.primaryButtonHoverBackground || context.theme.primaryButtonHoverColor) && css`
+                    background-color: ${context.theme.primaryButtonHoverBackground};
+                    color: ${context.theme.primaryButtonHoverColor};
+                `) ||
+                (css`
+                    background-color: ${primaryColor.darken(darkenAmountHover).hex()};
+                `)}
+            }
+
+            &:active { 
+                ${((context.theme.primaryButtonActiveBackground || context.theme.primaryButtonActiveColor) && css`
+                    background-color: ${context.theme.primaryButtonActiveBackground};
+                    color: ${context.theme.primaryButtonActiveColor};
+                `) ||
+                (css`
+                    background-color: ${primaryColor.darken(darkenAmountActive).hex()};
+                `)}
+            }
     `) ||
 
         ((context.type === colorTypes.SECONDARY) && css`
