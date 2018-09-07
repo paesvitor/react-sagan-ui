@@ -4,24 +4,20 @@ import styled, { css } from 'styled-components'
 import alertColors from 'Alert/utils/alertColors'
 import toPx from 'utils/shared/toPx'
 import defaultTheme from 'config/theme'
+import makeColor from 'utils/colors/makeColor'
 // import IconClose from '@material-ui/icons/Close'
 
-// Defines colors config for alertColors()
-const colorsConfig = {
-    backgroundWeight: 'is300',
-    borderWeight: 'is700'
-}
-
 const SaganAlert = styled.div`
-    ${context => css`
+    ${props => css`
         padding: 15px;
         border-radius: 2px;
-        border-left: 6px solid;
-        ${alertColors(context, colorsConfig)}
+        border-left: 6px solid ${makeColor(props, 0.3)};
+        color: ${props.type === 'warning' ? '#000' : '#fff'};
         display: flex;
-        font-size: ${toPx(context.theme.alertFontSize || defaultTheme.alert.font.size)};
+        font-size: ${toPx(props.theme.alertFontSize || defaultTheme.alert.font.size)};
         align-items: center;
         margin: 15px 0px;
+        background-color: ${makeColor(props)};
 
         .alert-label {
           flex: 1;
@@ -42,8 +38,8 @@ const SaganAlert = styled.div`
 `
 
 const Alert = props => <SaganAlert {...props}>
-    <div className='alert-label'>{props.text}</div>
-    {props.showDismiss ? <div onClick={() => props.dismissAction()} className='alert-dismiss'>x</div> : null}
+  <div className='alert-label'>{props.text}</div>
+  {props.showDismiss ? <div onClick={() => props.dismissAction()} className='alert-dismiss'>x</div> : null}
 </SaganAlert>
 
 Alert.propTypes = {

@@ -1,35 +1,26 @@
 import styled, { css } from 'styled-components'
-import defaultTheme from 'config/theme'
 import BaseButton from './BaseButton'
-import buttonsHover from 'utils/buttons/makeFlatButtonsHovers'
+import defaultTheme from 'config/theme'
 
 // Makers
-import makeInvertedButtonsColors from 'utils/colors/makeInvertedButtonsColors'
-import makeShadow from 'utils/shared/makeShadow'
-import makeInvertedButtonsHover from 'utils/buttons/makeInvertedButtonHovers'
+import toPx from 'utils/shared/toPx'
+import makeColor from 'utils/colors/makeColor'
 
 const InvertedButton = styled(BaseButton)`
    ${props => css`
         /* Base styles */
         background: transparent;
-        border: ${props.theme.buttonBorderSize || defaultTheme.button.border.size} solid;
-        /* Makers */
-        ${makeInvertedButtonsColors(props)}
+        border: ${toPx(props.theme.buttonBorderSize || defaultTheme.button.border.size)} solid;
+        border-color: ${makeColor(props)};
+        color: ${makeColor(props)};
+
         &:hover {
-            ${buttonsHover(props)}
-            ${makeInvertedButtonsHover(props)}
-            ${makeShadow()}
+            background-color: ${makeColor(props)};
+            color: #fff;
         }
-        /* Disabled styles for inverted button */
-        &:disabled {
-        box-shadow: none;
-        border-color: ${defaultTheme.colors.gray.is400};
-        color: ${defaultTheme.colors.gray.is400};
-            &:hover {
-                background: unset;
-                border-color: ${defaultTheme.colors.gray.is400};
-                cursor: not-allowed;
-            }
+        &:active {
+            background-color: ${makeColor(props, props.theme.buttonActiveAmount || defaultTheme.button.colors.activeAmount)};
+            border-color: ${makeColor(props, props.theme.buttonActiveAmount || defaultTheme.button.colors.activeAmount)};
         }
     `}
 `

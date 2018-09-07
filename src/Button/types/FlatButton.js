@@ -3,27 +3,21 @@ import BaseButton from './BaseButton'
 import defaultTheme from 'config/theme'
 
 // Makers
-import makeFlatButtonsColors from 'utils/colors/makeFlatButtonsColors'
-import makeFlatButtonsHovers from 'utils/buttons/makeFlatButtonsHovers'
-import makeShadow from 'utils/shared/makeShadow'
+import makeColor from 'utils/colors/makeColor'
 
 const FlatButton = styled(BaseButton)`
-    ${context => css`
-        ${makeFlatButtonsColors(context, context.theme.buttonFlatColorWeight, context.theme.buttonFlatBackgroundWeight)}
-        /* Creates Buttons hovers for flat button */
-        ${makeFlatButtonsHovers(context)}
-        /* If buttonShadow is true, creates Buttons shadow */
-        ${makeShadow() && context.theme.buttonShadow}
-    `}
-    /* Disabled styles for flat button */
-    &:disabled {
-        box-shadow: none;
-        background-color: ${defaultTheme.colors.gray.is400};
+    ${props => css`
+       background-color: ${makeColor(props)};
+
         &:hover {
-            background-color: ${defaultTheme.colors.gray.is400};
-            cursor: not-allowed;
+            background-color: ${makeColor(props, props.theme.buttonHoverAmount || defaultTheme.button.colors.hoverAmount)};
         }
-    }
+
+        &:active {
+            background-color: ${makeColor(props, props.theme.buttonActiveAmount || defaultTheme.button.colors.activeAmount)};
+        }
+    `}
+
 `
 
 export default FlatButton

@@ -1,7 +1,10 @@
 import styled, { css } from 'styled-components'
 import defaultTheme from 'config/theme'
-import buttonsPadding from 'utils/buttons/makeButtonsPadding'
+import makeButtonPadding from '../utils/makeButtonPadding'
+import makeButtonFontColor from '../utils/makeButtonFontColor'
 import toPx from 'utils/shared/toPx'
+import makeColor from 'utils/colors/makeColor'
+import makeShadow from 'utils/shared/makeShadow'
 
 const BaseButton = styled.button`
     ${props => css`
@@ -11,9 +14,9 @@ const BaseButton = styled.button`
         cursor: pointer;
         display: inline-block;
         transition: 0.2s all;
-        padding: ${buttonsPadding(props.theme.buttonSize || 10)};
+        padding: ${makeButtonPadding(props.theme.buttonSize || 10)};
         font-size: ${toPx(props.theme.buttonFontSize || defaultTheme.button.fontSize)};
-        color: ${props.theme.buttonFontColor || defaultTheme.button.colors.default};
+        color: ${makeButtonFontColor(props)};
         border: 1px solid transparent;
         border-radius: ${toPx(props.theme.buttonBorderRadius || defaultTheme.button.border.radius)};
         font-weight: bold;
@@ -22,6 +25,7 @@ const BaseButton = styled.button`
         */
         /* Button has uppercase font? */
         ${props.theme.buttonUppercaseFont && 'text-transform: uppercase'}
+        ${props.theme.buttonShadow && makeShadow(props.theme.buttonShadowAmount)}
         /* 
         * --> Single Button Props
         */
@@ -40,14 +44,27 @@ const BaseButton = styled.button`
         ${props.size &&
             ((props.size === 'small') && `
                 font-size: ${toPx((props.theme.buttonFontSize - 2) || defaultTheme.button.fontSize - 2)};
-                padding: ${buttonsPadding((props.theme.buttonSize - 5) || 5)};
+                padding: ${makeButtonPadding((props.theme.buttonSize - 5) || 5)};
             `) ||
             ((props.size === 'large') && `
                 font-size: ${toPx((props.theme.buttonFontSize + 2) || defaultTheme.button.fontSize + 2)}};
-                padding: ${buttonsPadding((props.theme.buttonSize + 5) || 15)};
+                padding: ${makeButtonPadding((props.theme.buttonSize + 5) || 15)};
             `)
         }
+        /* Focus Style */
         &:focus { outline: none }
+        /* Disabled styles */
+        &:disabled {
+            box-shadow: none;
+            background-color: ${makeColor(props, -0.9)};
+            cursor: not-allowed;
+            border: none;
+            color: #fff;
+            &:hover {
+                background-color: ${makeColor(props, -0.9)};
+                color: #fff !important;
+            }
+        }
     `}
 `
 

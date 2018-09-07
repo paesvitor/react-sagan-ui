@@ -67,6 +67,12 @@ import ButtonGroup from '../ButtonGroup'
   <Button fluid label="Fluid Button" type="primary"/>
 </Playground>
 
+#### Disabled
+
+<Playground>
+  <Button disabled label="Disabled"/>
+</Playground>
+
 ## Theme config props
 
 These configs applies to all Button elements on the application
@@ -92,3 +98,12 @@ These configs applies to all Button elements on the application
 
     // Shows button shadow to flat button
     buttonShadow: @Boolean - [Default: false]
+
+    // Defines shadow amount
+    buttonShadowAmount: @Number - [Default: 0.2]
+
+    // Defines how much to darken or lighten button when hovering
+    buttonHoverAmount: @Number - [Default: -0.1]
+
+    // Defines how much to darken or lighten button when clicked
+    buttonActiveAmount: @Number - [Default: 0.4]
