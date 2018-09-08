@@ -8,7 +8,7 @@
       }
     },
     "ordering": "descending",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "repository": "https://github.com/paesvitor/sagan"
   },
   "entries": {
@@ -78,6 +78,11 @@
           "depth": 4,
           "slug": "inverted-button",
           "value": "Inverted Button"
+        },
+        {
+          "depth": 4,
+          "slug": "icons",
+          "value": "Icons"
         },
         {
           "depth": 4,
@@ -160,6 +165,28 @@
         }
       ]
     },
+    "src/Documentaion/Helpers.mdx": {
+      "name": "Helpers",
+      "id": "e07beaf811e952666ab89063ac01e436",
+      "filepath": "src/Documentaion/Helpers.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/Documentaion/Helpers.mdx",
+      "slug": "src-documentaion-helpers",
+      "route": "/src-documentaion-helpers",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "helpers",
+          "value": "Helpers"
+        },
+        {
+          "depth": 2,
+          "slug": "text-align",
+          "value": "Text Align"
+        }
+      ]
+    },
     "src/Documentaion/GettingStarted.mdx": {
       "name": "Getting Started",
       "route": "/",
@@ -214,28 +241,6 @@
           "depth": 5,
           "slug": "4---test-your-changes-using-using-link-check-usage-guide-to-inject-custom-props",
           "value": "4 - Test your changes using using link "
-        }
-      ]
-    },
-    "src/Documentaion/Helpers.mdx": {
-      "name": "Helpers",
-      "id": "e07beaf811e952666ab89063ac01e436",
-      "filepath": "src/Documentaion/Helpers.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Documentaion/Helpers.mdx",
-      "slug": "src-documentaion-helpers",
-      "route": "/src-documentaion-helpers",
-      "order": 0,
-      "menu": null,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "helpers",
-          "value": "Helpers"
-        },
-        {
-          "depth": 2,
-          "slug": "text-align",
-          "value": "Text Align"
         }
       ]
     },
