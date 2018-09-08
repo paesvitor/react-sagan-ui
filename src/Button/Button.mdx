@@ -1,10 +1,12 @@
 ---
 name: Button
+menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz'
 import Button from './Button'
 import ButtonGroup from '../ButtonGroup'
+import { FiAlertCircle, FiChevronRight } from "react-icons/fi";
 
 # Button
 
@@ -44,6 +46,17 @@ import ButtonGroup from '../ButtonGroup'
   </ButtonGroup>
 </Playground>
 
+#### Icons
+
+<Playground>
+  <Button 
+    label="Default Button" 
+    size="lg" 
+    leftIcon={<FiAlertCircle/>}
+    rightIcon={<FiChevronRight/>}
+  />
+</Playground>
+
 #### Corners
 
 <Playground>
@@ -56,9 +69,9 @@ import ButtonGroup from '../ButtonGroup'
 #### Sizes
 
 <Playground>
-  <Button size="small" label="Small" type="primary"/>
-  <Button label="Medium" type="primary"/>
-  <Button size="large" label="Large" type="primary"/>
+  <Button size="sm" label="Button sm" type="primary"/>
+  <Button label="Button md" type="primary"/>
+  <Button size="lg" label="Button lg" type="primary"/>
 </Playground>
 
 #### Fluid
@@ -83,13 +96,6 @@ import ButtonGroup from '../ButtonGroup'
 ## Theme config props
 
 These configs applies to all Button elements on the application
-
-
-    // Changes button base padding
-    buttonSize:  @Number - [Default: 10]
-
-    // Changes button font size
-    buttonFontSize:  @Number - [Default: 12]
 
     // Changes primary button font color
     primaryButtonFontColor:  @String - [Default: '#fff']

@@ -11,7 +11,7 @@ const InvertedButton = styled(BaseButton)`
    ${props => css`
         /* Base styles */
         background: transparent;
-        border: ${toPx(props.theme.buttonBorderSize || defaultTheme.button.border.size)} solid;
+        border: ${toPx(props.theme.buttonBorderSize || 1)} solid;
         border-color: ${makeColor(props)};
         color: ${makeColor(props)};
 

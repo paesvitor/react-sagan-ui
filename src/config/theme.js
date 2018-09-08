@@ -33,6 +33,30 @@ export const colorTypes = {
     success: colors.green
 }
 
+export const globals = {
+    borderRadius: 2,
+    fontBaseSize: 1,
+    fontBaseGrowth: 0.250,
+    buttonBaseGrowth: 0.2
+}
+
+export const spacing = {
+    xs: globals.fontBaseSize * 0.5,
+    sm: globals.fontBaseSize * 0.75,
+    md: globals.fontBaseSize * 1.25,
+    lg: globals.fontBaseSize * 2,
+    xl: globals.fontBaseSize * 3.25,
+    xxl: globals.fontBaseSize * 5.25
+}
+
+export const sides = {
+    0: '',
+    l: 'left',
+    t: 'top',
+    r: 'right',
+    b: 'bottom'
+}
+
 export const mainColors = {
     primary: colors.indigo,
     secondary: colors.orange
@@ -40,33 +64,20 @@ export const mainColors = {
 
 // Font
 export const font = {
-    size: 16,
-    weights: {
-        normal: 400,
-        bold: 700
+    sizes: {
+        xs: 0.5,
+        sm: 0.75,
+        md: 1,
+        lg: 1.25,
+        xl: 1.5,
+        xxl: 1.75
     }
-}
-
-export const global = {
-    borderRadius: 3,
-    paddingY: 15,
-    paddingX: 15
 }
 
 // Button
 export const button = {
-    sizes: {
-        paddingY: 10,
-        paddingX: 30
-    },
-    transition: 0.2,
-    fontSize: 12,
+    baseSize: 1,
     fontColor: colors.white,
-
-    border: {
-        radius: 0,
-        size: 1
-    },
 
     colors: {
         default: colors.white,
@@ -77,16 +88,7 @@ export const button = {
 
 export const card = {
     cardShadow: true,
-    headerSize: 220,
-    titleColor: colors.gray.is900,
-    dateColor: colors.gray.is500,
-    contentColor: colors.gray.is800
-}
-
-export const alert = {
-    font: {
-        size: 13
-    }
+    headerSize: 220
 }
 
 // General Theme Export
@@ -94,11 +96,11 @@ export const theme = {
     font,
     button,
     colors,
-    global,
+    globals,
     card,
-    alert,
     mainColors,
-    colorTypes
+    colorTypes,
+    spacing
 }
 
 export default theme

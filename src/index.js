@@ -3,8 +3,8 @@ import ButtonGroup from './ButtonGroup'
 import Card from './Card'
 import Colors from './config/colors'
 import Alert from './Alert'
-import { colorWeights } from 'utils/constants'
 import ThemeProvider from './ThemeProvider'
+import Icon from './Icon'
 
 export {
   ThemeProvider,
@@ -13,5 +13,5 @@ export {
   Card,
   Colors,
   Alert,
-  colorWeights
+  Icon
 }

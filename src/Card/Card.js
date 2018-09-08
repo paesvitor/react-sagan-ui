@@ -3,13 +3,14 @@ import styled, { css } from 'styled-components'
 import defaultTheme from 'config/theme'
 import PropTypes from 'prop-types'
 import toPx from 'utils/shared/toPx'
+import toRem from 'utils/shared/toRem'
 
 const SaganCard = styled.div`
     ${context => css`
         word-wrap: break-word;
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
         background-color: #fff;
-        border-radius: ${toPx(context.theme.globalBorderRadius || defaultTheme.global.borderRadius)};
+        border-radius: ${toPx(context.theme.globalBorderRadius || defaultTheme.globals.borderRadius)};
         .card-header {
             background: ${defaultTheme.colors.gray.is200};
             height: ${toPx(context.theme.cardHeaderSize || defaultTheme.card.headerSize)};
@@ -19,58 +20,62 @@ const SaganCard = styled.div`
         }
 
         .card-body {
-            padding: 15px;
+            padding: 1rem;
+            .card-icon {
+              padding: 1rem 0rem;
+            }
+
             .card-date {
-                padding: 15px 0px;
-                color: ${context.theme.cardDateColor || defaultTheme.colors.gray.is500};
+                padding: 1rem 0rem;
+                color: ${context.theme.cardDateColor || '#cacaca'};
                 font-weight: 300;
-                font-size: 12px;
+                font-size: ${toRem(defaultTheme.font.sizes.sm)};
             }
 
             .card-title {
-                font-size: 27px;
+                font-size: ${toRem(defaultTheme.font.sizes.xl)};
                 font-weight: bold;
-                margin-bottom: 15px;
+                margin-bottom: 1rem;
                 /* text-transform: uppercase; */
                 display: inline-block;
                 white-space: nowrap;
                 width: 100%;
                 overflow: hidden !important;
                 text-overflow: ellipsis;
-                color: ${context.theme.cardTitleColor || defaultTheme.card.titleColor}
+                color: ${context.theme.cardTitleColor || '#000'}
             }
 
             .card-content {
-                color: ${context.theme.cardContentColor || defaultTheme.colors.gray.is700};
+                color: ${context.theme.cardContentColor || '#989898'};
                 font-weight: 300;
-                font-size: 14px;
+                font-size: ${toRem(defaultTheme.font.sizes.md)};
             }
         }
 
         .card-footer {
             color: ${context.theme.primaryColor || defaultTheme.colors.primary};
             font-weight: bold;
-            font-size: 13px;
-            padding: 15px;
+            font-size: ${toRem(defaultTheme.font.sizes.sm)};
+            padding: 1rem;
         }
         
         /* Show card shadow */
         ${context.theme.cardShadow || defaultTheme.card.cardShadow && css`
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
         `}
-
-        ${console.log(context)}
     `}
 `
 export class Card extends PureComponent {
   render() {
-    const { image, date, title, content, footer } = this.props
+    const { image, icon, date, title, content, footer } = this.props
 
     return (
       <SaganCard {...this.props}>
-        {image ? <div className='card-header' style={{backgroundImage: `url(${image})`}} /> : null}
+        {image ? <div className='card-header' style={{ backgroundImage: `url(${image})` }} /> : null}
 
         <div className='card-body'>
+          {icon ? <div className='card-icon'>{icon}</div> : null}
+
           {date ? <div className='card-date'>
             {date}
           </div> : null}

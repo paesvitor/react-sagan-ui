@@ -1,12 +1,15 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import Theme from 'docz-theme-default'
+import helpers from '../../src/utils/helpers'
 
 import { imports } from './imports'
 import db from './db.json'
 
 const Root = () => (
   <Theme
+    className='oi'
+    helpers={helpers}
     db={db}
     imports={imports}
     hashRouter={false}

@@ -4,8 +4,16 @@ import FlatButton from './types/FlatButton'
 import InvertedButton from './types/InvertedButton'
 
 const Button = props => props.inverted
-  ? <InvertedButton {...props}>{props.label}</InvertedButton>
-  : <FlatButton {...props}>{props.label}</FlatButton>
+  ? <InvertedButton {...props}>
+    {props.leftIcon ? <div className='button-left-icon'>{props.leftIcon}</div> : null}
+    <div className='button-label'>{props.label}</div>
+    {props.rightIcon ? <div className='button-right-icon'>{props.rightIcon}</div> : null}
+  </InvertedButton>
+  : <FlatButton {...props}>
+    {props.leftIcon ? <div className='button-left-icon'>{props.leftIcon}</div> : null}
+    <div className='button-label'>{props.label}</div>
+    {props.rightIcon ? <div className='button-right-icon'>{props.rightIcon}</div> : null}
+  </FlatButton>
 
 Button.propTypes = {
   /** Button label */
@@ -33,9 +41,12 @@ Button.propTypes = {
    * Button sizes
    */
   size: PropTypes.oneOf([
-    'small',
-    'large',
-    'medium'
+    'xs',
+    'sm',
+    'lg',
+    'md',
+    'lg',
+    'xl'
   ]),
   /**
    * Invert button colors
@@ -44,14 +55,22 @@ Button.propTypes = {
   /**
    * Make button fluid
    */
-  fluid: PropTypes.bool
+  fluid: PropTypes.bool,
+  /**
+   * Left icon
+   */
+  leftIcon: PropTypes.element,
+  /**
+   * Right icon
+   */
+  rightIcon: PropTypes.element
 }
 
 Button.defaultProps = {
   label: 'No label',
   type: 'primary',
   corners: 'none',
-  size: 'medium',
+  size: 'md',
   inverted: false,
   fluid: false
 }

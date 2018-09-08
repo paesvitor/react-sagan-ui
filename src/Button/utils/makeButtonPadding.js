@@ -1,15 +1,12 @@
-import { button } from 'config/theme'
+import defaultTheme from 'config/theme'
 
 const buttonPadding = size => {
-  let y
-  let x
+    const { globals: { buttonBaseGrowth } } = defaultTheme
 
-  if (size > 0) {
-    y = (button.sizes.paddingY / 100) * size * 10
-    x = (button.sizes.paddingX / 100) * size * 10
-  }
+    const y = buttonBaseGrowth
+    const x = buttonBaseGrowth * 2
 
-  return `${y}px ${x}px`
+    return `${y * size}rem ${x * size}rem`
 }
 
 export default buttonPadding

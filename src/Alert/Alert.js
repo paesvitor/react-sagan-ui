@@ -1,22 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import toPx from 'utils/shared/toPx'
 import defaultTheme from 'config/theme'
 import makeColor from 'utils/colors/makeColor'
-// import IconClose from '@material-ui/icons/Close'
+import toRem from 'utils/shared/toRem'
+import makePadding from '../Button/utils/makeButtonPadding'
 
 const SaganAlert = styled.div`
     ${props => css`
-        padding: 15px;
-        border-radius: 2px;
+        padding: ${makePadding(4)};
+        border-radius: 0.2rem;
         border-left: 6px solid ${makeColor(props, 0.3)};
         color: ${props.type === 'warning' ? '#000' : '#fff'};
-        font-size: ${toPx(props.theme.alertFontSize || defaultTheme.alert.font.size)};
+        font-size: ${toRem(props.theme.alertFontSize || defaultTheme.font.sizes.md)};
         align-items: center;
-        margin: 15px 0px;
+        margin: 1rem 0rem;
         background-color: ${makeColor(props)};
         display: ${props.show ? 'flex' : 'none'};
+        line-height: 1.5;
 
         .alert-label {
           flex: 1;
@@ -26,12 +27,10 @@ const SaganAlert = styled.div`
             display: flex;
             cursor: pointer;
             /* border: 1px solid #fff; */
-            font-size: 14px;
             line-height: 0;
             font-weight: bold;
             border-radius: 50%;
             padding: 3px;
-            svg { font-size: 18px }
         }
     `}
 `
