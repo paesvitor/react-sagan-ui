@@ -5,6 +5,7 @@ import Colors from './config/colors'
 import Alert from './Alert'
 import ThemeProvider from './ThemeProvider'
 import Icon from './Icon'
+import helpers from 'utils/helpers'
 
 export {
   ThemeProvider,

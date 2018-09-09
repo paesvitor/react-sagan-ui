@@ -16,7 +16,7 @@ const SaganAlert = styled.div`
         align-items: center;
         margin: 1rem 0rem;
         background-color: ${makeColor(props)};
-        display: ${props.show ? 'flex' : 'none'};
+        display: flex;
         line-height: 1.5;
 
         .alert-label {
@@ -35,10 +35,10 @@ const SaganAlert = styled.div`
     `}
 `
 
-const Alert = props => <SaganAlert {...props}>
+const Alert = props => props.show ? <SaganAlert {...props}>
   <div className='alert-label'>{props.text}</div>
   {props.showDismiss ? <div onClick={() => props.dismissAction()} className='alert-dismiss'>x</div> : null}
-</SaganAlert>
+</SaganAlert> : null
 
 Alert.propTypes = {
     /** Alert text */

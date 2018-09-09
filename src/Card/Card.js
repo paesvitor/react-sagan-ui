@@ -67,29 +67,42 @@ const SaganCard = styled.div`
 `
 export class Card extends PureComponent {
   render() {
-    const { image, icon, date, title, content, footer } = this.props
+    const {
+      image,
+      icon,
+      date,
+      title,
+      content,
+      footer,
+      headerClass,
+      iconClass,
+      dateClass,
+      titleClass,
+      footerClass,
+      contentClass
+    } = this.props
 
     return (
       <SaganCard {...this.props}>
-        {image ? <div className='card-header' style={{ backgroundImage: `url(${image})` }} /> : null}
+        {image ? <div className={'card-header ' + headerClass || ''} style={{ backgroundImage: `url(${image})` }} /> : null}
 
         <div className='card-body'>
-          {icon ? <div className='card-icon'>{icon}</div> : null}
+          {icon ? <div className={(iconClass || '') + ' card-icon'}>{icon}</div> : null}
 
-          {date ? <div className='card-date'>
+          {date ? <div className={(dateClass || '') + ' card-date'}>
             {date}
           </div> : null}
 
-          {title ? <div className='card-title'>
+          {title ? <div className={(titleClass || '') + ' card-title'}>
             {title}
           </div> : null}
 
-          {content ? <div className='card-content'>
+          {content ? <div className={(contentClass || '') + ' card-content'}>
             {content}
           </div> : null}
         </div>
 
-        {footer ? <div className='card-footer'>
+        {footer ? <div className={(footerClass || '') + ' card-footer'}>
           {footer}
         </div> : null}
       </SaganCard>
@@ -98,7 +111,7 @@ export class Card extends PureComponent {
 }
 
 Card.propTypes = {
-  /** If empty, will not display anything */
+  /** Card image */
   image: PropTypes.string,
   /** Card date */
   date: PropTypes.string,

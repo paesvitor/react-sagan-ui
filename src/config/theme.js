@@ -41,6 +41,7 @@ export const globals = {
 }
 
 export const spacing = {
+    0: 0,
     xs: globals.fontBaseSize * 0.5,
     sm: globals.fontBaseSize * 0.75,
     md: globals.fontBaseSize * 1.25,
