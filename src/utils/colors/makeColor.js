@@ -2,25 +2,25 @@ import defaultTheme from 'config/theme'
 import Color from 'color'
 
 const makeColor = (props, amount) => {
-    const { theme, type } = props
-    let color
+    const { theme, color } = props
+    let finalColor
 
-    switch (type) {
+    switch (color) {
         case 'primary':
-            color = theme.primaryColor || defaultTheme.colorTypes.primary
+            finalColor = theme.primaryColor || defaultTheme.colorTypes.primary
             break
         case 'secondary':
-            color = theme.secondaryColor || defaultTheme.colorTypes.secondary
+            finalColor = theme.secondaryColor || defaultTheme.colorTypes.secondary
             break
         default:
-            color = defaultTheme.colorTypes[type]
+            finalColor = defaultTheme.colorTypes[color]
     }
 
     if (amount) {
-        color = Color(color).darken(amount).hex()
+        finalColor = Color(finalColor).darken(amount).hex()
     }
 
-    return color
+    return finalColor
 }
 
 export default makeColor

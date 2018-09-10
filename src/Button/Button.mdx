@@ -11,7 +11,7 @@ import { FiAlertCircle, FiChevronRight } from "react-icons/fi";
 # Button
 
 <Playground>
-  <Button label="Default Button"/>
+  <Button label="Default Button" color="primary"/>
 </Playground>
 
 ## Props
@@ -24,12 +24,12 @@ import { FiAlertCircle, FiChevronRight } from "react-icons/fi";
 
 <Playground>
   <ButtonGroup>
-    <Button label="primary" type="primary"/>
-    <Button label="secondary" type="secondary"/>
-    <Button label="success" type="success"/>
-    <Button label="danger" type="danger"/>
-    <Button label="warning" type="warning"/>
-    <Button label="info" type="info"/>
+    <Button label="primary" color="primary"/>
+    <Button label="secondary" color="secondary"/>
+    <Button label="success" color="success"/>
+    <Button label="danger" color="danger"/>
+    <Button label="warning" color="warning"/>
+    <Button label="info" color="info"/>
   </ButtonGroup>
 </Playground>
 
@@ -37,12 +37,12 @@ import { FiAlertCircle, FiChevronRight } from "react-icons/fi";
 
 <Playground>
   <ButtonGroup>
-    <Button inverted label="primary" type="primary"/>
-    <Button inverted label="secondary" type="secondary"/>
-    <Button inverted label="success" type="success"/>
-    <Button inverted label="danger" type="danger"/>
-    <Button inverted label="warning" type="warning"/>
-    <Button inverted label="info" type="info"/>
+    <Button type="outline" label="primary" color="primary"/>
+    <Button type="outline" label="secondary" color="secondary"/>
+    <Button type="outline" label="success" color="success"/>
+    <Button type="outline" label="danger" color="danger"/>
+    <Button type="outline" label="warning" color="warning"/>
+    <Button type="outline" label="info" color="info"/>
   </ButtonGroup>
 </Playground>
 
@@ -50,6 +50,7 @@ import { FiAlertCircle, FiChevronRight } from "react-icons/fi";
 
 <Playground>
   <Button 
+    color="primary"
     label="Default Button" 
     size="lg" 
     leftIcon={<FiAlertCircle/>}
@@ -61,35 +62,35 @@ import { FiAlertCircle, FiChevronRight } from "react-icons/fi";
 
 <Playground>
   <ButtonGroup>
-    <Button corners="pill" label="Pill" type="primary"/>
-    <Button corners="rounded" label="Rounded" type="secondary"/>
+    <Button corners="pill" label="Pill" color="primary"/>
+    <Button corners="rounded" label="Rounded" color="secondary"/>
   </ButtonGroup>
 </Playground>
 
 #### Sizes
 
 <Playground>
-  <Button size="sm" label="Button sm" type="primary"/>
-  <Button label="Button md" type="primary"/>
-  <Button size="lg" label="Button lg" type="primary"/>
+  <Button size="sm" label="Button sm" color="primary"/>
+  <Button label="Button md" color="primary"/>
+  <Button size="lg" label="Button lg" color="primary"/>
 </Playground>
 
 #### Fluid
 
 <Playground>
-  <Button fluid label="Fluid Button" type="primary"/>
+  <Button fluid label="Fluid Button" color="primary"/>
 </Playground>
 
 #### Disabled
 
 <Playground>
   <ButtonGroup>
-    <Button disabled label="Disabled"/>
-    <Button disabled label="Disabled" type="secondary"/>
-    <Button disabled label="Disabled" type="success"/>
-    <Button disabled label="Disabled" type="danger"/>
-    <Button disabled label="Disabled" type="warning"/>
-    <Button disabled label="Disabled" type="info"/>
+    <Button type="outline" label="Disabled" color="primary"/>
+    <Button type="outline" label="Disabled" color="secondary"/>
+    <Button type="outline" label="Disabled" color="success"/>
+    <Button type="outline" label="Disabled" color="danger"/>
+    <Button type="outline" label="Disabled" color="warning"/>
+    <Button type="outline" label="Disabled" color="info"/>
   </ButtonGroup>
 </Playground>
 
@@ -122,7 +123,7 @@ These configs applies to all Button elements on the application
     buttonActiveAmount: @Number - [Default: 0.4]
 
     // Defines button hover style
-    buttonFlatHoverType: @Enum ['inverted'] - [Default: null]
+    buttonFlatHovercolor: @Enum ['inverted'] - [Default: null]
 
     // Defines button animation transition
     buttonTransition: @Number - [Default: 0.2]

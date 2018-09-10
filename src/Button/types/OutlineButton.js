@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import BaseButton from './BaseButton'
+import BaseButton from 'Button/types/BaseButton'
 import defaultTheme from 'config/theme'
 
 // Makers
@@ -7,7 +7,7 @@ import toPx from 'utils/shared/toPx'
 import makeColor from 'utils/colors/makeColor'
 import makeButtonFontColor from 'Button/utils/makeButtonFontColor'
 
-const InvertedButton = styled(BaseButton)`
+const OutlineButton = styled(BaseButton)`
    ${props => css`
         /* Base styles */
         background: transparent;
@@ -26,4 +26,4 @@ const InvertedButton = styled(BaseButton)`
     `}
 `
 
-export default InvertedButton
+export default OutlineButton

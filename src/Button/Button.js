@@ -1,19 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import FlatButton from './types/FlatButton'
-import InvertedButton from './types/InvertedButton'
+import OutlineButton from './types/OutlineButton'
 
-const Button = props => props.inverted
-  ? <InvertedButton {...props}>
+const BUTTON_TYPES = {
+  flat: FlatButton,
+  outline: OutlineButton
+}
+
+const Button = props => {
+  const { type } = props
+  const Handler = BUTTON_TYPES[type] || FlatButton
+
+  return <Handler {...props}>
     {props.leftIcon ? <div className='button-left-icon'>{props.leftIcon}</div> : null}
     <div className='button-label'>{props.label}</div>
     {props.rightIcon ? <div className='button-right-icon'>{props.rightIcon}</div> : null}
-  </InvertedButton>
-  : <FlatButton {...props}>
-    {props.leftIcon ? <div className='button-left-icon'>{props.leftIcon}</div> : null}
-    <div className='button-label'>{props.label}</div>
-    {props.rightIcon ? <div className='button-right-icon'>{props.rightIcon}</div> : null}
-  </FlatButton>
+  </Handler>
+}
 
 Button.propTypes = {
   /** Button label */
@@ -21,7 +25,7 @@ Button.propTypes = {
   /**
    * Button color types
    */
-  type: PropTypes.oneOf([
+  color: PropTypes.oneOf([
     'primary',
     'secondary',
     'success',
@@ -68,7 +72,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   label: 'No label',
-  type: 'primary',
+  color: 'primary',
+  type: 'flat',
   corners: 'none',
   size: 'md',
   inverted: false,
