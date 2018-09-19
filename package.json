@@ -106,14 +106,5 @@
     "color": "^3.0.0",
     "react-icons": "^3.0.5",
     "styled-components": "^3.4.5"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/config/setupTests.js",
-    "transform": {
-      "^.+\\.js?$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "!node_modules/react-runtime"
-    ]
   }
 }
