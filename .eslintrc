@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
+    "airbnb",
     "standard",
     "standard-react",
     "plugin:jest/recommended"
@@ -9,10 +10,7 @@
     "es6": true,
     "jest/globals": true
   },
-  "plugins": [
-    "react",
-    "jest"
-  ],
+  "plugins": ["react", "jest"],
   "parserOptions": {
     "sourceType": "module"
   },

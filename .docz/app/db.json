@@ -12,188 +12,13 @@
     "repository": "https://github.com/paesvitor/sagan"
   },
   "entries": {
-    "src/Alert/Alert.mdx": {
-      "name": "Alert",
-      "menu": "Components",
-      "id": "05ff1cfb0cfca65a9a76fc6d72083a93",
-      "filepath": "src/Alert/Alert.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Alert/Alert.mdx",
-      "slug": "src-alert-alert",
-      "route": "/src-alert-alert",
-      "order": 0,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "alert",
-          "value": "Alert"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 2,
-          "slug": "types",
-          "value": "Types"
-        },
-        {
-          "depth": 2,
-          "slug": "theme-config-props",
-          "value": "Theme config props"
-        }
-      ]
-    },
-    "src/Button/Button.mdx": {
-      "name": "Button",
-      "menu": "Components",
-      "id": "84b7c5fedddc508968c380b1bba30402",
-      "filepath": "src/Button/Button.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Button/Button.mdx",
-      "slug": "src-button-button",
-      "route": "/src-button-button",
-      "order": 0,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "button",
-          "value": "Button"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 2,
-          "slug": "variations",
-          "value": "Variations"
-        },
-        {
-          "depth": 4,
-          "slug": "flat-button",
-          "value": "Flat Button"
-        },
-        {
-          "depth": 4,
-          "slug": "inverted-button",
-          "value": "Inverted Button"
-        },
-        {
-          "depth": 4,
-          "slug": "icons",
-          "value": "Icons"
-        },
-        {
-          "depth": 4,
-          "slug": "corners",
-          "value": "Corners"
-        },
-        {
-          "depth": 4,
-          "slug": "sizes",
-          "value": "Sizes"
-        },
-        {
-          "depth": 4,
-          "slug": "fluid",
-          "value": "Fluid"
-        },
-        {
-          "depth": 4,
-          "slug": "disabled",
-          "value": "Disabled"
-        },
-        {
-          "depth": 2,
-          "slug": "theme-config-props",
-          "value": "Theme config props"
-        }
-      ]
-    },
-    "src/ButtonGroup/ButtonGroup.mdx": {
-      "name": "Button Group",
-      "menu": "Components",
-      "id": "05addf9dc7efeacf95a8ccb696c31a15",
-      "filepath": "src/ButtonGroup/ButtonGroup.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/ButtonGroup/ButtonGroup.mdx",
-      "slug": "src-button-group-button-group",
-      "route": "/src-button-group-button-group",
-      "order": 0,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "button-group",
-          "value": "Button Group"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 2,
-          "slug": "theme-config-props",
-          "value": "Theme config props"
-        }
-      ]
-    },
-    "src/Card/Card.mdx": {
-      "name": "Card",
-      "menu": "Components",
-      "id": "c675a9dbdf2039120b40211a2bcd031a",
-      "filepath": "src/Card/Card.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Card/Card.mdx",
-      "slug": "src-card-card",
-      "route": "/src-card-card",
-      "order": 0,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "card",
-          "value": "Card"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 2,
-          "slug": "theme-config-props",
-          "value": "Theme config props"
-        }
-      ]
-    },
-    "src/Documentaion/Helpers.mdx": {
-      "name": "Helpers",
-      "id": "e07beaf811e952666ab89063ac01e436",
-      "filepath": "src/Documentaion/Helpers.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Documentaion/Helpers.mdx",
-      "slug": "src-documentaion-helpers",
-      "route": "/src-documentaion-helpers",
-      "order": 0,
-      "menu": null,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "helpers",
-          "value": "Helpers"
-        },
-        {
-          "depth": 2,
-          "slug": "text-align",
-          "value": "Text Align"
-        }
-      ]
-    },
-    "src/Documentaion/GettingStarted.mdx": {
+    "src/documentaion/GettingStarted.mdx": {
       "name": "Getting Started",
       "route": "/",
       "order": 1,
-      "id": "c210212f98783b3a5880b9334d772528",
-      "filepath": "src/Documentaion/GettingStarted.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Documentaion/GettingStarted.mdx",
+      "id": "4ca5e70ae18c15a39ac6569a7f9a8216",
+      "filepath": "src/documentaion/GettingStarted.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/documentaion/GettingStarted.mdx",
       "slug": "src-documentaion-getting-started",
       "menu": null,
       "headings": [
@@ -244,57 +69,25 @@
         }
       ]
     },
-    "src/Icon/Icon.mdx": {
-      "name": "Icon",
-      "menu": "Components",
-      "id": "14d7832539c4f23d15425fcfd69a112d",
-      "filepath": "src/Icon/Icon.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Icon/Icon.mdx",
-      "slug": "src-icon-icon",
-      "route": "/src-icon-icon",
+    "src/documentaion/Helpers.mdx": {
+      "name": "Helpers",
+      "id": "85f9fc9aafeaaaff9e747ab07d46e628",
+      "filepath": "src/documentaion/Helpers.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/documentaion/Helpers.mdx",
+      "slug": "src-documentaion-helpers",
+      "route": "/src-documentaion-helpers",
       "order": 0,
+      "menu": null,
       "headings": [
         {
           "depth": 1,
-          "slug": "icon",
-          "value": "Icon"
+          "slug": "helpers",
+          "value": "Helpers"
         },
         {
           "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 2,
-          "slug": "theme-config-props",
-          "value": "Theme config props"
-        }
-      ]
-    },
-    "src/Input/Input.mdx": {
-      "name": "Input",
-      "menu": "Components",
-      "id": "0aab883d0a2cdf11a6d606d2112745e5",
-      "filepath": "src/Input/Input.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/Input/Input.mdx",
-      "slug": "src-input-input",
-      "route": "/src-input-input",
-      "order": 0,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "input",
-          "value": "Input"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 2,
-          "slug": "theme-config-props",
-          "value": "Theme config props"
+          "slug": "text-align",
+          "value": "Text Align"
         }
       ]
     }
