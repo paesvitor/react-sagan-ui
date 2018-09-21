@@ -24,6 +24,11 @@ const BaseButton = styled.button`
     &:focus {
       outline: none;
     }
+
+    &:disabled: {
+      background: red;
+      cursor: not-allowed;
+    }
   `};
 `;
 

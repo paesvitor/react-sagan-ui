@@ -10,13 +10,13 @@ const BUTTON_TYPES = {
 };
 
 const Button = props => {
-  const { children, type, loading } = props;
+  const { children, type, loading, color } = props;
   const Handler = BUTTON_TYPES[type];
 
   return (
     <Handler {...props} disabled={loading}>
       <div>{children}</div>
-      {loading && <ButtonLoading>Loading</ButtonLoading>}
+      {loading && <ButtonLoading color={color} />}
     </Handler>
   );
 };
