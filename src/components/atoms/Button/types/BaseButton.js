@@ -7,6 +7,7 @@ const BaseButton = styled.button`
   ${props => css`
     /* Base */
     cursor: pointer;
+    position: relative;
     transition: ${(props.buttonTransition || 0.2) + "s all"};
     font-weight: ${props.buttonFontWeight || 500};
     border: none;
