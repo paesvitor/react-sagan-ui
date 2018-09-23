@@ -1,26 +1,27 @@
-import styled, { css } from 'styled-components'
-import BaseButton from './BaseButton'
-import ButtonShape from '../Button.shape'
-import Color from 'color'
-
-const buttonShape = new ButtonShape()
+import styled, { css } from "styled-components";
+import BaseButton from "./BaseButton";
+import Color from "color";
 
 const OutlineButton = styled(BaseButton)`
-    ${props => css`
-        background-color: transparent;
-        color: ${buttonShape.getColor(props)};
-        border-color: ${buttonShape.getColor(props)};
+  ${({ color, shape }) => css`
+    background-color: transparent;
+    color: ${shape.getColor(color)};
+    border-color: ${shape.getColor(color)};
 
-         /* Pseudo Class */
-        &:hover {
-            background-color: ${Color(buttonShape.getColor(props)).lighten(0.1).hex()};
-            color: ${buttonShape.getFontColor(props)}
-        }
+    /* Pseudo Class */
+    &:hover {
+      background-color: ${Color(shape.getColor(color))
+        .lighten(0.1)
+        .hex()};
+      color: ${shape.getFontColor(color)};
+    }
 
-        &:active {
-            background-color: ${Color(buttonShape.getColor(props)).darken(0.1).hex()}
-        }
-    `}
-`
+    &:active {
+      background-color: ${Color(shape.getColor(color))
+        .darken(0.1)
+        .hex()};
+    }
+  `};
+`;
 
-export default OutlineButton
+export default OutlineButton;

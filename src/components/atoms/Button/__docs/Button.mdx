@@ -1,0 +1,82 @@
+---
+name: Button
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import {Button} from '../../../../index.js'
+import ButtonGroup from '../../ButtonGroup'
+
+# Button
+
+## Usage
+
+
+```js
+    import { Button } from 'sagan-ui'
+```
+
+<Playground>
+  <Button>This is a the default Button. </Button>
+</Playground>
+
+## Props
+
+<PropsTable of={Button} />
+
+## Colors
+
+<Playground>
+    {/* Base colors, colors can be changed through themeConfig, check this component Theme config props */}
+
+    <ButtonGroup>
+        <Button color="primary">Primary</Button>
+        <Button color="secondary">Secondary</Button>
+    </ButtonGroup>
+</Playground>
+
+<Playground>
+    <ButtonGroup>
+        <Button color="success">Success</Button>
+        <Button color="warning">Warning</Button>
+        <Button color="info">Info</Button>
+        <Button color="danger">Danger</Button>
+    </ButtonGroup>
+</Playground>
+
+## Sizes
+
+<Playground>
+  <Button size="xs">Button xs</Button>
+  <Button size="sm">Button sm</Button>
+  <Button size="md">Button md</Button>
+  <Button size="lg">Button lg</Button>
+  <Button size="xl">Button xl</Button>
+</Playground>
+
+## Types
+
+<Playground>
+    <ButtonGroup>
+        <Button type="outline">Outline</Button>
+        <Button type="default">Default</Button>
+    </ButtonGroup>
+</Playground>
+
+## Loading
+
+<Playground>
+    <ButtonGroup>
+        <Button loading> Loading </Button>
+    </ButtonGroup>
+</Playground>
+
+
+## Theme config props
+
+These configs applies to all Button elements on the application
+
+    // Changes default Button font size (unit: rem)
+    ButtonFontSize:  @Number - [Default: 1]
+
+

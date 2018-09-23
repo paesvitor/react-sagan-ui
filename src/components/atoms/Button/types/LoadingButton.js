@@ -2,13 +2,9 @@ import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import Loader from "components/atoms/Loader";
 
-import ButtonShape from "../Button.shape";
-
-const buttonShape = new ButtonShape();
-
 const StyledLoading = styled.div`
-  ${props => css`
-    background-color: ${buttonShape.getColor(props)};
+  ${({ shape, color }) => css`
+    background-color: ${shape.getColor(color)};
     position: absolute;
     left: 0;
     top: 0;
@@ -26,7 +22,7 @@ const StyledLoading = styled.div`
 
 const Loading = props => {
   return (
-    <StyledLoading color={props.color}>
+    <StyledLoading {...props}>
       <Loader />
     </StyledLoading>
   );

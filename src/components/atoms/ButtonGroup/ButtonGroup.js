@@ -3,11 +3,11 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
 const StyledButtonGroup = styled.div`
-  ${context => css`
+  ${({ spacing }) => css`
     display: flex;
     > * {
       flex: 1;
-      margin: 0.5rem;
+      margin: ${spacing || 0.5}rem;
       &:first-child {
         margin-left: 0;
       }
@@ -30,7 +30,7 @@ ButtonGroup.propTypes = {
   /**
    * Defines children buttons spacing
    */
-  buttonSpacing: PropTypes.number
+  spacing: PropTypes.number
 };
 
 export default ButtonGroup;

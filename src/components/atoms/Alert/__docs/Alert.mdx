@@ -1,0 +1,41 @@
+---
+name: Alert
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Alert from '../Alert'
+
+# Alert
+
+## Usage
+
+```js
+import { Alert } from 'sagan-ui'
+```
+
+<Playground>
+  <Alert>This is a the default Alert. </Alert>
+</Playground>
+
+## Props
+
+<PropsTable of={Alert} />
+
+## Types
+
+<Playground>
+  <Alert color="success">Success. </Alert>
+  <Alert color="warning">Warning. </Alert>
+  <Alert color="info">Info. </Alert>
+  <Alert color="danger">Danger. </Alert>
+</Playground>
+
+## Theme config props
+
+These configs applies to all Alert elements on the application
+
+    // Changes default alert font size (unit: rem)
+    alertFontSize:  @Number - [Default: 1]
+
+

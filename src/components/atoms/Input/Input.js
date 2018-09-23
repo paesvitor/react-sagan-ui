@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
 import InputShape from "./Input.shape";
-import { shadow } from "styles/mixins";
+import PropTypes from "prop-types";
 
 const inputShape = new InputShape();
 
@@ -28,7 +28,7 @@ const StyledInput = styled.input`
 const StyledInputError = styled.div`
   color: #f44336;
   margin-top: 0.5rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 `;
 
 const Input = props => {
@@ -40,6 +40,13 @@ const Input = props => {
       {error && <StyledInputError>{error}</StyledInputError>}
     </Fragment>
   );
+};
+
+Input.propTypes = {
+  /**
+   * Input error message
+   */
+  error: PropTypes.string
 };
 
 export default Input;

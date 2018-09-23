@@ -1,0 +1,45 @@
+---
+name: Form
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Label from '../../../atoms/Label'
+import Input from '../../../atoms/Input'
+import FormGroup from '../../../atoms/FormGroup'
+import Form from '../Form.js'
+
+# Form
+
+## Usage
+
+```js
+    import { Form, FormGroup, Input, Label } from 'sagan-ui'
+```
+
+<Playground>
+    <Form>
+        <FormGroup>
+            <Label helper="This is a helper">Name</Label>
+            <Input type="text" placeholder="placeholder"/>
+        </FormGroup>
+        <FormGroup>
+            <Label>Password</Label>
+            <Input type="password" placeholder="placeholder"/>
+        </FormGroup>
+        <FormGroup>
+            <Label>Email</Label>
+            <Input type="password" placeholder="placeholder" error="This is an error"/>
+        </FormGroup>
+    </Form>
+</Playground>
+
+## Props
+
+### Label
+<PropsTable of={Label} />
+
+### Input
+<PropsTable of={Input} />
+
+

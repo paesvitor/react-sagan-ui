@@ -1,32 +1,32 @@
-import { defaultColors, defaultFontSize } from 'defaultTheme'
+import { defaultColors, defaultFontSize, mainColors } from "defaultTheme";
 
 /**
  * Receives theme from component context to configure this shape
  * @param {Object} theme
  * @returns {Object} color
  */
-export const colorShape = (theme) => {
+export const colorShape = (theme = {}) => {
     return {
-        primary: theme.primaryColor || defaultColors.indigo,
-        secondary: theme.primaryColor || defaultColors.orange,
-        info: defaultColors.blue,
-        warning: defaultColors.yellow,
-        danger: defaultColors.red,
-        success: defaultColors.green
-    }
-}
+        primary: theme.primaryColor || mainColors.primary,
+        secondary: theme.secondaryColor || mainColors.secondary,
+        info: defaultColors.info,
+        warning: defaultColors.warning,
+        danger: defaultColors.danger,
+        success: defaultColors.success
+    };
+};
 
 /**
  * @returns {Object} size
  */
 export const fontSizeShape = () => {
-    const { baseSize, scaleRatio } = defaultFontSize
+    const { baseSize, scaleRatio } = defaultFontSize;
 
     return {
-        xs: `${baseSize - (scaleRatio * 2)}rem`,
-        sm: `${baseSize - (scaleRatio)}rem`,
+        xs: `${baseSize - scaleRatio * 2}rem`,
+        sm: `${baseSize - scaleRatio}rem`,
         md: `${baseSize}rem`,
-        lg: `${baseSize + (scaleRatio)}rem`,
-        xl: `${baseSize + (scaleRatio * 2)}rem`
-    }
-}
+        lg: `${baseSize + scaleRatio}rem`,
+        xl: `${baseSize + scaleRatio * 2}rem`
+    };
+};

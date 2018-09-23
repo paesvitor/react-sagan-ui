@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import DefaultButton from "./types/DefaultButton";
 import OutlineButton from "./types/OutlineButton";
 import ButtonLoading from "./types/LoadingButton";
+import ButtonShape from "./Button.shape";
+import { withTheme } from "styled-components";
 
 const BUTTON_TYPES = {
   default: DefaultButton,
@@ -10,13 +12,14 @@ const BUTTON_TYPES = {
 };
 
 const Button = props => {
-  const { children, type, loading, color } = props;
+  const { children, type, loading, color, theme } = props;
   const Handler = BUTTON_TYPES[type];
+  const shape = new ButtonShape(theme);
 
   return (
-    <Handler {...props} disabled={loading}>
-      <div>{children}</div>
-      {loading && <ButtonLoading color={color} />}
+    <Handler {...props} disabled={loading} shape={shape}>
+      {children}
+      {loading && <ButtonLoading color={color} shape={shape} />}
     </Handler>
   );
 };
@@ -40,7 +43,11 @@ Button.propTypes = {
   /**
    * Button type options
    */
-  type: PropTypes.oneOf(["default", "flat", "outline"])
+  type: PropTypes.oneOf(["default", "flat", "outline"]),
+  /**
+   * Border types
+   */
+  border: PropTypes.oneOf(["pill", "rounded"])
 };
 
 Button.defaultProps = {
@@ -49,4 +56,4 @@ Button.defaultProps = {
   type: "default"
 };
 
-export default Button;
+export default withTheme(Button);

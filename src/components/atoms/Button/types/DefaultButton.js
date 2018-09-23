@@ -1,23 +1,21 @@
-import styled, { css } from 'styled-components'
-import BaseButton from './BaseButton'
-import ButtonShape from '../Button.shape'
-import Color from 'color'
-
-const buttonShape = new ButtonShape()
+import styled, { css } from "styled-components";
+import BaseButton from "./BaseButton";
+import Color from "color";
 
 const DefaultButton = styled(BaseButton)`
-    ${props => css`
-        background-color: ${buttonShape.getColor(props)};
+  ${({ color, shape }) => css`
+    background-color: ${shape.getColor(color)};
+    &:hover {
+      background-color: ${Color(shape.getColor(color))
+        .whiten(0.15)
+        .hex()};
+    }
+    &:active {
+      background-color: ${Color(shape.getColor(color))
+        .blacken(0.15)
+        .hex()};
+    }
+  `};
+`;
 
-        /* Pseudo Class */
-        &:hover {
-            background-color: ${Color(buttonShape.getColor(props)).whiten(0.15).hex()}
-        }
-
-        &:active {
-            background-color: ${Color(buttonShape.getColor(props)).blacken(0.15).hex()}
-        }
-    `}
-`
-
-export default DefaultButton
+export default DefaultButton;

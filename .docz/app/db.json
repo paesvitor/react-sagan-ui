@@ -8,8 +8,9 @@
       }
     },
     "ordering": "descending",
-    "version": "0.0.4",
-    "repository": "https://github.com/paesvitor/sagan"
+    "version": "0.1.0",
+    "repository": "https://github.com/paesvitor/sagan",
+    "native": false
   },
   "entries": {
     "src/documentaion/GettingStarted.mdx": {
@@ -88,6 +89,164 @@
           "depth": 2,
           "slug": "text-align",
           "value": "Text Align"
+        }
+      ]
+    },
+    "src/components/molecules/Form/__docs/Form.mdx": {
+      "name": "Form",
+      "menu": "Components",
+      "id": "3e6bb06bd2c5f44b1184cbdabee8ea1b",
+      "filepath": "src/components/molecules/Form/__docs/Form.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/components/molecules/Form/__docs/Form.mdx",
+      "slug": "src-components-molecules-form-docs-form",
+      "route": "/src-components-molecules-form-docs-form",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "form",
+          "value": "Form"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "Usage"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 3,
+          "slug": "label",
+          "value": "Label"
+        },
+        {
+          "depth": 3,
+          "slug": "input",
+          "value": "Input"
+        }
+      ]
+    },
+    "src/components/atoms/Alert/__docs/Alert.mdx": {
+      "name": "Alert",
+      "menu": "Components",
+      "id": "3101948b57361a36818ec2422b4acdbb",
+      "filepath": "src/components/atoms/Alert/__docs/Alert.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/components/atoms/Alert/__docs/Alert.mdx",
+      "slug": "src-components-atoms-alert-docs-alert",
+      "route": "/src-components-atoms-alert-docs-alert",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "alert",
+          "value": "Alert"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "Usage"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 2,
+          "slug": "types",
+          "value": "Types"
+        },
+        {
+          "depth": 2,
+          "slug": "theme-config-props",
+          "value": "Theme config props"
+        }
+      ]
+    },
+    "src/components/atoms/Button/__docs/Button.mdx": {
+      "name": "Button",
+      "menu": "Components",
+      "id": "33ffcb492d3a6efd4e67c9b61aa7338b",
+      "filepath": "src/components/atoms/Button/__docs/Button.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/components/atoms/Button/__docs/Button.mdx",
+      "slug": "src-components-atoms-button-docs-button",
+      "route": "/src-components-atoms-button-docs-button",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "Usage"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 2,
+          "slug": "colors",
+          "value": "Colors"
+        },
+        {
+          "depth": 2,
+          "slug": "sizes",
+          "value": "Sizes"
+        },
+        {
+          "depth": 2,
+          "slug": "types",
+          "value": "Types"
+        },
+        {
+          "depth": 2,
+          "slug": "loading",
+          "value": "Loading"
+        },
+        {
+          "depth": 2,
+          "slug": "theme-config-props",
+          "value": "Theme config props"
+        }
+      ]
+    },
+    "src/components/atoms/ButtonGroup/__docs/ButtonGroup.mdx": {
+      "name": "Button Group",
+      "menu": "Components",
+      "id": "bc5fd57ce1ea8834d403412f5de462ff",
+      "filepath": "src/components/atoms/ButtonGroup/__docs/ButtonGroup.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/components/atoms/ButtonGroup/__docs/ButtonGroup.mdx",
+      "slug": "src-components-atoms-button-group-docs-button-group",
+      "route": "/src-components-atoms-button-group-docs-button-group",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button-group",
+          "value": "Button Group"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "Usage"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 2,
+          "slug": "theme-config-props",
+          "value": "Theme config props"
         }
       ]
     }

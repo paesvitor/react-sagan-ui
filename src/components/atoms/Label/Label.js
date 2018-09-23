@@ -9,11 +9,11 @@ const StyledLabel = styled.label`
     font-weight: bold;
     display: flex;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
 
     .label-helper {
       color: #888;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       font-weight: 300;
       padding-left: 0.5rem;
     }

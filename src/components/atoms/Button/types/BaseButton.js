@@ -1,24 +1,21 @@
 import styled, { css } from "styled-components";
-import ButtonShape from "../Button.shape";
-
-const buttonShape = new ButtonShape();
 
 const BaseButton = styled.button`
-  ${props => css`
-    /* Base */
+  ${({ color, size, border, fluid, theme, shape }) => css`
     cursor: pointer;
     position: relative;
-    transition: ${(props.buttonTransition || 0.2) + "s all"};
-    font-weight: ${props.buttonFontWeight || 500};
+    transition: ${theme.buttonTransition || 0.2}s all;
+    font-weight: ${theme.buttonFontWeight || 500};
     border: none;
-    display: inline-block;
+    display: block;
     border: 1px solid transparent;
-    padding: ${buttonShape.getSize(props)};
-    font-size: ${buttonShape.getFontSize(props)};
-    color: ${buttonShape.getFontColor(props)};
+    padding: ${shape.getSize(size)};
+    font-size: ${shape.getFontSize(size)};
+    color: ${shape.getFontColor(color)};
+    border-radius: ${shape.getBorderRadius(border)};
 
     /* Conditionals */
-    width: ${props.fluid && `100%`};
+    width: ${fluid && `100%`};
 
     /* Pseudo Class */
     &:focus {

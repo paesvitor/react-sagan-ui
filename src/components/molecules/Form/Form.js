@@ -4,22 +4,13 @@ import PropTypes from "prop-types";
 
 const StyledForm = styled.form`
   ${context => css`
-    padding: 5rem;
+    /* padding: 5rem; */
   `};
 `;
 
 export class Form extends Component {
-  validateForm(e) {
-    e.preventDefault();
-    console.log(e.target);
-  }
-
   render() {
-    return (
-      <StyledForm onSubmit={this.validateForm} {...this.props}>
-        {this.props.children}
-      </StyledForm>
-    );
+    return <StyledForm {...this.props}>{this.props.children}</StyledForm>;
   }
 }
 
