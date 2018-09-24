@@ -12,13 +12,15 @@ const StyledInput = styled.input`
         width: 100%;
         border: none;
         box-sizing: border-box;
+        border-radius: ${theme.inputBorderRadius || 0}px;
         background-color: ${theme.inputBackgroundColor || "#fff"};
         transition: 0.2s all;
         border: ${theme.inputBorderSize || 1}px solid
             ${error ? "#FF1744" : theme.inputBorderColor || "#cacaca"};
 
         &:focus {
-            border: 1px solid ${theme.inputFocusBorderColor || "#dce4e8"};
+            border: ${theme.inputBorderSize || 1}px solid
+                ${theme.inputFocusBorderColor || "#dce4e8"};
             outline: none;
             -webkit-box-shadow: inset 0 0 0px 9999px white,
                 0 0 8px
