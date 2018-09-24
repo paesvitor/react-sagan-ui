@@ -8,7 +8,7 @@
       }
     },
     "ordering": "descending",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repository": "https://github.com/paesvitor/sagan",
     "native": false
   },
@@ -89,43 +89,6 @@
           "depth": 2,
           "slug": "text-align",
           "value": "Text Align"
-        }
-      ]
-    },
-    "src/components/molecules/Form/__docs/Form.mdx": {
-      "name": "Form",
-      "menu": "Components",
-      "id": "3e6bb06bd2c5f44b1184cbdabee8ea1b",
-      "filepath": "src/components/molecules/Form/__docs/Form.mdx",
-      "link": "https://github.com/paesvitor/sagan/edit/master/src/components/molecules/Form/__docs/Form.mdx",
-      "slug": "src-components-molecules-form-docs-form",
-      "route": "/src-components-molecules-form-docs-form",
-      "order": 0,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "form",
-          "value": "Form"
-        },
-        {
-          "depth": 2,
-          "slug": "usage",
-          "value": "Usage"
-        },
-        {
-          "depth": 2,
-          "slug": "props",
-          "value": "Props"
-        },
-        {
-          "depth": 3,
-          "slug": "label",
-          "value": "Label"
-        },
-        {
-          "depth": 3,
-          "slug": "input",
-          "value": "Input"
         }
       ]
     },
@@ -247,6 +210,43 @@
           "depth": 2,
           "slug": "theme-config-props",
           "value": "Theme config props"
+        }
+      ]
+    },
+    "src/components/molecules/Form/__docs/Form.mdx": {
+      "name": "Form",
+      "menu": "Components",
+      "id": "3e6bb06bd2c5f44b1184cbdabee8ea1b",
+      "filepath": "src/components/molecules/Form/__docs/Form.mdx",
+      "link": "https://github.com/paesvitor/sagan/edit/master/src/components/molecules/Form/__docs/Form.mdx",
+      "slug": "src-components-molecules-form-docs-form",
+      "route": "/src-components-molecules-form-docs-form",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "form",
+          "value": "Form"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "Usage"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        },
+        {
+          "depth": 3,
+          "slug": "label",
+          "value": "Label"
+        },
+        {
+          "depth": 3,
+          "slug": "input",
+          "value": "Input"
         }
       ]
     }

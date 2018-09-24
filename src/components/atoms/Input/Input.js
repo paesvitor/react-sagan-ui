@@ -6,47 +6,49 @@ import PropTypes from "prop-types";
 const inputShape = new InputShape();
 
 const StyledInput = styled.input`
-  ${props => css`
-    padding: 0.8rem;
-    display: block;
-    width: 100%;
-    border: none;
-    box-sizing: border-box;
-    background-color: #fff;
-    transition: 0.2s all;
-    border: 1px solid ${props.error ? "red" : "#cacaca"};
+    ${({ theme, error }) => css`
+        padding: ${theme.inputPadding || 1}rem;
+        display: block;
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        background-color: ${theme.inputBackgroundColor || "#fff"};
+        transition: 0.2s all;
+        border: ${theme.inputBorderSize || 1}px solid
+            ${error ? "#FF1744" : theme.inputBorderColor || "#cacaca"};
 
-    &:focus {
-      border: 1px solid #2196f3;
-      outline: none;
-      -webkit-box-shadow: inset 0 0 0px 9999px white,
-        0 0 8px rgba(102, 175, 233, 0.6);
-    }
-  `};
+        &:focus {
+            border: 1px solid ${theme.inputFocusBorderColor || "#dce4e8"};
+            outline: none;
+            -webkit-box-shadow: inset 0 0 0px 9999px white,
+                0 0 8px
+                    ${theme.inputFocusShadowColor || "rgba(102, 175, 233, 0.6)"};
+        }
+    `};
 `;
 
 const StyledInputError = styled.div`
-  color: #f44336;
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
+    color: #f44336;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
 `;
 
 const Input = props => {
-  const { error } = props;
+    const { error } = props;
 
-  return (
-    <Fragment>
-      <StyledInput {...props} />
-      {error && <StyledInputError>{error}</StyledInputError>}
-    </Fragment>
-  );
+    return (
+        <Fragment>
+            <StyledInput {...props} />
+            {error && <StyledInputError>{error}</StyledInputError>}
+        </Fragment>
+    );
 };
 
 Input.propTypes = {
-  /**
-   * Input error message
-   */
-  error: PropTypes.string
+    /**
+     * Input error message
+     */
+    error: PropTypes.string
 };
 
 export default Input;
