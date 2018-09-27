@@ -20,7 +20,7 @@ const StyledInput = styled.input`
 
         &:focus {
             border: ${theme.inputBorderSize || 1}px solid
-                ${theme.inputFocusBorderColor || "#dce4e8"};
+                ${theme.inputFocusBorderColor || "#9ec3ff"};
             outline: none;
             -webkit-box-shadow: inset 0 0 0px 9999px white,
                 0 0 8px
