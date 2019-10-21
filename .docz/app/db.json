@@ -642,26 +642,6 @@
       ]
     },
     {
-      "key": "src/components/molecules/Form/Form.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Form",
-          "methods": [],
-          "actualName": "Form",
-          "props": {
-            "children": {
-              "type": {
-                "name": "node"
-              },
-              "required": false,
-              "description": "Component childrens"
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/components/utils/ComponentsFactory/ComponentsFactory.js",
       "value": [
         {
@@ -714,6 +694,26 @@
           "displayName": "ThemeProvider",
           "methods": [],
           "actualName": "ThemeProvider"
+        }
+      ]
+    },
+    {
+      "key": "src/components/molecules/Form/Form.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Form",
+          "methods": [],
+          "actualName": "Form",
+          "props": {
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": false,
+              "description": "Component childrens"
+            }
+          }
         }
       ]
     },

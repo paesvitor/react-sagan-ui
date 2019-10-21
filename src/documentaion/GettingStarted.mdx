@@ -9,7 +9,6 @@ order: 1
 ![NPM](https://img.shields.io/npm/v/sagan-ui.svg)
 [![Docs](https://img.shields.io/badge/read-docs-blue.svg)](https://paesvitor.github.io/sagan)
 
-
 A UI component library for Farfetch for test purpose
 
 ## Install
@@ -18,11 +17,11 @@ A UI component library for Farfetch for test purpose
 
 ## Usage
 
- - Wrap your application with ThemeProvider if you want a custom library configuration
- - Create a themeConfig.js anywhere you want in your application and pass it as theme prop to ThemeProvider
- - Check each Component Readme tab to see available props to your themeConfig
+- Wrap your application with ThemeProvider if you want a custom library configuration
+- Create a themeConfig.js anywhere you want in your application and pass it as theme prop to ThemeProvider
+- Check each Component Readme tab to see available props to your themeConfig
 
-~~~js
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider, Button } from 'sagan-ui';
@@ -42,7 +41,7 @@ ReactDOM.render(
     </ThemeProvider>,
     mountNode
 );
-~~~
+```
 
 ## Developing
 
@@ -59,19 +58,20 @@ ReactDOM.render(
     npm run docz:dev
 
 ##### 3.1 - Create a .mdx doc inside your component and import your component inside this file
-~~~js
+
+```js
 ---
 name: Alert
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground, Props } from 'docz'
 import Alert from './Alert'
 
 <Playground>
   <Alert text="secondary"/>
 </Playground>
 
-~~~
+```
 
 ##### 4 - Test your changes using using link **(Check Usage guide to inject custom props)**
 
