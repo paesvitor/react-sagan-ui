@@ -1,34 +1,12 @@
 {
   "presets": [
     [
-      "@babel/preset-env",
+      "env",
       {
         "modules": false
       }
     ],
-    "@babel/preset-react"
-  ],
-
-  "plugins": [
-    "styled-components",
-    "react-docgen",
-    [
-      "module-resolver",
-      {
-        "root": ["./src/**"],
-        "alias": {}
-      }
-    ]
-  ],
-
-  "env": {
-    "test": {
-      "presets": [
-        ["@babel/preset-env", { "modules": false }],
-        "@babel/preset-react"
-      ],
-      "plugins": ["transform-export-extensions"],
-      "only": ["./**/*.js", "node_modules/jest-runtime"]
-    }
-  }
+    "stage-0",
+    "react"
+  ]
 }
