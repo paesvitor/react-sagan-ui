@@ -1,4 +1,4 @@
-import { colorShape } from "shapes";
+import { colorShape } from "../../../shapes";
 
 // Base config for this shape
 const config = {};

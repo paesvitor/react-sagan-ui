@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
-import Loader from "components/atoms/Loader";
+import Loader from "../../Loader";
 
 const StyledLoading = styled.div`
   ${({ shape, color }) => css`

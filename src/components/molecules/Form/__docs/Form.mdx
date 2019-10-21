@@ -3,44 +3,50 @@ name: Form
 menu: Components
 ---
 
-import { Playground, PropsTable } from 'docz'
-import Label from '../../../atoms/Label'
-import Input from '../../../atoms/Input'
-import FormGroup from '../../../atoms/FormGroup'
-import Form from '../Form.js'
+import { Playground, Props } from "docz";
+import Label from "../../../atoms/Label";
+import Input from "../../../atoms/Input";
+import FormGroup from "../../../atoms/FormGroup";
+import Form from "../Form.js";
 
 # Form
 
 ## Usage
 
 ```js
-    import { Form, FormGroup, Input, Label } from 'sagan-ui'
+import { Form, FormGroup, Input, Label } from "sagan-ui";
 ```
 
 <Playground>
-    <Form>
-        <FormGroup>
-            <Label helper="This is a helper">Name</Label>
-            <Input type="text" placeholder="placeholder"/>
-        </FormGroup>
-        <FormGroup>
-            <Label>Password</Label>
-            <Input type="password" placeholder="placeholder"/>
-        </FormGroup>
-        <FormGroup>
-            <Label>Email</Label>
-            <Input type="password" placeholder="placeholder" error="This is an error"/>
-        </FormGroup>
-    </Form>
+  <Form>
+    <FormGroup>
+      <Label helper="This is a helper">Name</Label>
+      <Input type="text" placeholder="placeholder" />
+    </FormGroup>
+    <FormGroup>
+      <Label>Password</Label>
+      <Input type="password" placeholder="placeholder" />
+    </FormGroup>
+    <FormGroup>
+      <Label>Email</Label>
+      <Input
+        type="password"
+        placeholder="placeholder"
+        error="This is an error"
+      />
+    </FormGroup>
+  </Form>
 </Playground>
 
 ## Props
 
 ### Label
-<PropsTable of={Label} />
+
+<Props of={Label} />
 
 ### Input
-<PropsTable of={Input} />
+
+<Props of={Input} />
 
 ## Theme config props
 
@@ -63,6 +69,3 @@ These configs applies to all Input elements on the application
 
     // Changes default input focus shadow color
     inputFocusShadowColor:  @String - [Default: 'rgba(102, 175, 233, 0.6)']
-
-    
-

@@ -1,4 +1,4 @@
-import { colorShape, fontSizeShape } from "shapes";
+import { colorShape, fontSizeShape } from "../../../shapes";
 
 // Base config for this shape
 const buttonConfig = {

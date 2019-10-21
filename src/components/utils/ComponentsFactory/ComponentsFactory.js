@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 // Components
-import Button from "components/atoms/Button";
-import Alert from "components/atoms/Alert";
+import Button from "../../atoms/Button";
+import Alert from "../../atoms/Alert";
 
 export class ComponentsLoader extends Component {
   renderComponent(component) {

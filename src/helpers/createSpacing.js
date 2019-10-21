@@ -1,4 +1,4 @@
-import { spacing, sides } from "defaultTheme";
+import { spacing, sides } from "../defaultTheme";
 
 const createSpacing = (property, shortName) => {
   return Object.keys(spacing).map(size => {

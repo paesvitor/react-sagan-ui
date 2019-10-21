@@ -1,7 +1,7 @@
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import createSpacing from "./createSpacing";
 
-export default injectGlobal`
+export default createGlobalStyle`
     .text-center { text-align: center }
     .text-left {text-align: left}
     .text-right {text-align: right}

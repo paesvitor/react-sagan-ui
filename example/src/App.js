@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { Alert, Button } from "sagan-ui";
 
-import ExampleComponent from 'react-modern-library-boilerplate'
-
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div>
+      <Alert>alert</Alert>
+    </div>
+  );
 }
+
+export default App;
