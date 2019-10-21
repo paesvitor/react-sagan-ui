@@ -21,7 +21,8 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "docz dev": "docz dev",
-    "docz build": "docz build"
+    "docz build": "docz build",
+    "docz serve": "docz serve"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
