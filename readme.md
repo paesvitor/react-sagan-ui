@@ -1,13 +1,7 @@
----
-name: Getting Started
-route: /
-order: 1
----
-
 # Sagan UI
 
 ![NPM](https://img.shields.io/npm/v/sagan-ui.svg)
-[![Docs](https://img.shields.io/badge/read-docs-blue.svg)](https://paesvitor.github.io/sagan)
+[![Docs](https://img.shields.io/badge/read-docs-blue.svg)](https://react-sagan-ui.netlify.com/)
 
 A React UI component library.
 I created this library to develop fast and scalable design systems.
